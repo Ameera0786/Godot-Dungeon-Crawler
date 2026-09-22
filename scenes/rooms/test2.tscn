@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://3pxhqpjl7bdh"]
+
+[ext_resource type="PackedScene" uid="uid://cn2codhr64yo8" path="res://scenes/rooms/RoomInitial.tscn" id="1_s8xwc"]
+[ext_resource type="PackedScene" uid="uid://c60ljgm775u4" path="res://scenes/rooms/RoomBoss.tscn" id="2_y3hvs"]
+
+[node name="Test2" type="Node2D" unique_id=1166859363]
+
+[node name="RoomInitial" parent="." unique_id=298192343 instance=ExtResource("1_s8xwc")]
+
+[node name="RoomBoss" parent="." unique_id=2042861693 instance=ExtResource("2_y3hvs")]
+position = Vector2(1271, 2)

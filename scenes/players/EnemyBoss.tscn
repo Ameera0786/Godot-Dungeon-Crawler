@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://o8g8qp4dbb3p"]
+
+[ext_resource type="Texture2D" uid="uid://dkl6hrb4kmd0b" path="res://assets/characters/enemies/Little_Demon/Attack/Little_demon_fire_attack1.png" id="1_mk0b1"]
+[ext_resource type="Script" uid="uid://dpgsgom2bcw0e" path="res://scripts/enemy_movement.gd" id="1_pey7e"]
+[ext_resource type="Texture2D" uid="uid://bws2lb7ik4t3v" path="res://assets/characters/enemies/Little_Demon/Attack/Little_demon_fire_attack2.png" id="2_mt3yt"]
+[ext_resource type="Texture2D" uid="uid://cpwho885n4pjc" path="res://assets/characters/enemies/Little_Demon/Attack/Little_demon_fire_attack3.png" id="3_360an"]
+[ext_resource type="Texture2D" uid="uid://co7cnu4jxkypb" path="res://assets/characters/enemies/Little_Demon/Attack/Little_demon_fire_attack4.png" id="4_x2s1n"]
+[ext_resource type="Texture2D" uid="uid://wa28fylpjhl" path="res://assets/characters/enemies/Little_Demon/Attack/Little_demon_fire_attack5.png" id="5_u7nc5"]
+[ext_resource type="Texture2D" uid="uid://5guce3xcpos0" path="res://assets/characters/enemies/Little_Demon/Die/Little_demon_die1.png" id="6_4poal"]
+[ext_resource type="Texture2D" uid="uid://bhl6osbtcgrm3" path="res://assets/characters/enemies/Little_Demon/Die/Little_demon_die2.png" id="7_xsbji"]
+[ext_resource type="Texture2D" uid="uid://dl2wiagfsklgi" path="res://assets/characters/enemies/Little_Demon/Die/Little_demon_die3.png" id="8_4c1jp"]
+[ext_resource type="Texture2D" uid="uid://cgjscorylkyhv" path="res://assets/characters/enemies/Little_Demon/Die/Little_demon_die4.png" id="9_pey7e"]
+[ext_resource type="Texture2D" uid="uid://vxrouopquqaq" path="res://assets/characters/enemies/Little_Demon/Hurt/Little_demon_dead1.png" id="10_y5ys0"]
+[ext_resource type="Texture2D" uid="uid://h4hutbircpy4" path="res://assets/characters/enemies/Little_Demon/Hurt/Little_demon_dead2.png" id="11_whfon"]
+[ext_resource type="Texture2D" uid="uid://t0qvx3inq24b" path="res://assets/characters/enemies/Little_Demon/Hurt/Little_demon_dead3.png" id="12_nhd6h"]
+[ext_resource type="Texture2D" uid="uid://dj5wv0aup6t07" path="res://assets/characters/enemies/Little_Demon/Hurt/Little_demon_dead4.png" id="13_gafu2"]
+[ext_resource type="Texture2D" uid="uid://b1u5g78q61uou" path="res://assets/characters/enemies/Little_Demon/Hurt/Little_demon_dead5.png" id="14_e83vp"]
+[ext_resource type="Texture2D" uid="uid://m8pb1ep7j8cm" path="res://assets/characters/enemies/Little_Demon/Idle/Little_demon_Idle-Sheet.png" id="15_fx6s1"]
+[ext_resource type="Texture2D" uid="uid://c4prdxubtm64w" path="res://assets/characters/enemies/Little_Demon/Walk/Little_demon_walk1.png" id="16_k1h3g"]
+[ext_resource type="Texture2D" uid="uid://c2k8ebj07p1le" path="res://assets/characters/enemies/Little_Demon/Walk/Little_demon_walk2.png" id="17_kv6y1"]
+[ext_resource type="Texture2D" uid="uid://qx7bcyf3u677" path="res://assets/characters/enemies/Little_Demon/Walk/Little_demon_walk3.png" id="18_dhjxt"]
+[ext_resource type="Texture2D" uid="uid://e7omrrqbmwi5" path="res://assets/characters/enemies/Little_Demon/Walk/Little_demon_walk4.png" id="19_r2nl7"]
+[ext_resource type="Script" uid="uid://ibm2hauklm14" path="res://scripts/boss_combat.gd" id="22_x2s1n"]
+[ext_resource type="PackedScene" uid="uid://b0sgrmag1nisw" path="res://scenes/players/fireball.tscn" id="23_u7nc5"]
+[ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/shapes/circular png shadows.png" id="26_fx6s1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnknt"]
+atlas = ExtResource("15_fx6s1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibbpj"]
+atlas = ExtResource("15_fx6s1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72esa"]
+atlas = ExtResource("15_fx6s1")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phxls"]
+atlas = ExtResource("15_fx6s1")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2t4bf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mk0b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mt3yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_360an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x2s1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u7nc5")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4poal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xsbji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4c1jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pey7e")
+}],
+"loop": 0,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_y5ys0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_whfon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nhd6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gafu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_e83vp")
+}],
+"loop": 0,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnknt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibbpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72esa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phxls")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_k1h3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kv6y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dhjxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_r2nl7")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_10fes"]
+radius = 24.0
+height = 82.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kv6y1"]
+radius = 23.0
+height = 82.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2nl7"]
+radius = 97.4155
+
+[node name="DemonBoss" type="CharacterBody2D" unique_id=1322271421 groups=["enemies"]]
+collision_layer = 4
+script = ExtResource("1_pey7e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1567953345]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_2t4bf")
+animation = &"death"
+autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056664103]
+shape = SubResource("CapsuleShape2D_10fes")
+
+[node name="BodyArea" type="Area2D" parent="." unique_id=81061533]
+position = Vector2(1, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyArea" unique_id=671660203]
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_kv6y1")
+
+[node name="AttackHitBox" type="Marker2D" parent="." unique_id=1121416616]
+position = Vector2(0, 21)
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1172891374]
+scale = Vector2(0.9, 0.9)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=922001875]
+shape = SubResource("CircleShape2D_r2nl7")
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractionArea" unique_id=599288659]
+position = Vector2(-2.3333473, 10.49999)
+scale = Vector2(0.12355658, 0.12134333)
+texture = ExtResource("26_fx6s1")
+
+[node name="Combat" type="Node2D" parent="." unique_id=901392161]
+script = ExtResource("22_x2s1n")
+max_health = 500
+attack_range = 300.0
+fireball_scene = ExtResource("23_u7nc5")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

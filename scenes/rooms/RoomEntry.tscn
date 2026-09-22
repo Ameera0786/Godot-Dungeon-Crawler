@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dvuxsuk4a7khp"]
+
+[ext_resource type="Script" uid="uid://bu4e676d3wnsv" path="res://scripts/lockRoom.gd" id="1_qf6ue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw705"]
+size = Vector2(1150, 610)
+
+[node name="RoomEntry" type="Area2D" unique_id=671535244]
+collision_mask = 6
+script = ExtResource("1_qf6ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=23226451]
+position = Vector2(642, 369)
+shape = SubResource("RectangleShape2D_fw705")
+
+[node name="LockRoom" type="StaticBody2D" parent="." unique_id=1664527979]
+position = Vector2(40, 35)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LockRoom" unique_id=1150371902]
+build_mode = 1
+polygon = PackedVector2Array(1, 3, 1194, 3, 1194, 665, 1, 665)

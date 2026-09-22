@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://c5ucsikxpou0t"]
+
+[ext_resource type="Script" uid="uid://bufq7s8bk2tl" path="res://scripts/hud.gd" id="1_4ucgc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1b1"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ucgc"]
+bg_color = Color(0.18899831, 0.39504308, 0.26095352, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1942679178]
+script = ExtResource("1_4ucgc")
+
+[node name="Control" type="Control" parent="." unique_id=672372197]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1916255616]
+layout_mode = 0
+offset_left = 1062.0
+offset_top = 384.0
+offset_right = 1263.0
+offset_bottom = 659.0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=2066080644]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 26
+text = "1 - Heavy Attack"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer" unique_id=478101079]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 26
+text = "2 - Range Attack"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/VBoxContainer" unique_id=886568811]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 26
+text = "Z/Space - Block"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="Control" unique_id=2120424187]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1.0
+offset_top = 17.0
+offset_right = 558.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_vr1b1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4ucgc")
+show_percentage = false

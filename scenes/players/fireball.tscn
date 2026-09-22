@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b0sgrmag1nisw"]
+
+[ext_resource type="Script" uid="uid://c2w6kghwiqokt" path="res://scripts/fireball.gd" id="1_orjvs"]
+[ext_resource type="Texture2D" uid="uid://bpuv13tkd7ueh" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball1.png" id="2_yk8l0"]
+[ext_resource type="Texture2D" uid="uid://d4kdlpkxuil0h" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball2.png" id="3_vsgyg"]
+[ext_resource type="Texture2D" uid="uid://bboru1t6mstb1" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball3.png" id="4_lh2dm"]
+[ext_resource type="Texture2D" uid="uid://cnjls1esiureh" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball4.png" id="5_8i61h"]
+[ext_resource type="Texture2D" uid="uid://cy3dmgkh8lkvp" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball5.png" id="6_r787y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhjxt"]
+size = Vector2(28.75, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5k6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yk8l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vsgyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lh2dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8i61h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r787y")
+}],
+"loop": 1,
+"name": &"fireball",
+"speed": 5.0
+}]
+
+[node name="Fireball" type="Area2D" unique_id=1387110891]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_orjvs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001933373]
+shape = SubResource("RectangleShape2D_dhjxt")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=211948907]
+texture_filter = 1
+position = Vector2(-3, -1.5)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_m5k6n")
+animation = &"fireball"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://j3d2vkjtpp2o"]
+
+[ext_resource type="Script" uid="uid://dek0kww8jot1k" path="res://scripts/dialogue_box.gd" id="1_fs1ng"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10fes"]
+bg_color = Color(0.4574954, 0.25593716, 0.41120598, 0.8)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26w86"]
+bg_color = Color(0.18000486, 0.1800049, 0.18000478, 1)
+skew = Vector2(-0.25, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="DialogueBox" type="CanvasLayer" unique_id=378984418]
+script = ExtResource("1_fs1ng")
+
+[node name="Panel" type="Panel" parent="." unique_id=989948558]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_10fes")
+
+[node name="Text" type="Label" parent="Panel" unique_id=1452172317]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel" unique_id=630936277]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -35.0
+offset_right = 249.0
+offset_bottom = 42.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_26w86")
+
+[node name="Title" type="Label" parent="Panel/Panel" unique_id=166925189]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 6.0
+offset_right = 216.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.99303013, 0.9119147, 0.9191859, 1)
+theme_override_colors/font_outline_color = Color(0.86898494, 0.8689849, 0.8689849, 1)
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
