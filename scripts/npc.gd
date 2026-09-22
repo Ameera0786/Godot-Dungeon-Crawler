@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+# Exports
 @export var npc_name: String = "Twisted Sorcerer"
 @export_multiline var dialogue_lines: Array[String] = [
 	"Greetings traveler! I see another one of you decided to come down and explore the caves.",
@@ -16,19 +17,21 @@ extends CharacterBody2D
 	"...."
 ]
 
+# Sprite
 @onready var prompt_sprite: AnimatedSprite2D = $AnimatedSprite2D2
 
+# Initial load in
 func _ready() -> void:
 	add_to_group("interactable")
-	# Explicitly hide the prompt when the scene loads
 	show_prompt(false)
 
+# Show prompt
 func show_prompt(visible_state: bool) -> void:
-	if prompt_sprite:
-		prompt_sprite.visible = visible_state
+	prompt_sprite.visible = visible_state
 
+# Interact with player
 func interact() -> void:
 	if DialogueManager.is_active:
 		return
-		
+	
 	DialogueManager.start_dialogue(dialogue_lines, npc_name)

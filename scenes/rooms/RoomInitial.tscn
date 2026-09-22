@@ -600,6 +600,6 @@ tile_set = SubResource("TileSet_10fes")
 position = Vector2(654, 340)
 
 [node name="EnemySlime" parent="." unique_id=1743494039 instance=ExtResource("5_cbo1f")]
-position = Vector2(963, 195)
+position = Vector2(1098, 277)
 
 [node name="RoomEntry" parent="." unique_id=671535244 instance=ExtResource("4_23yxr")]

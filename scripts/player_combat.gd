@@ -17,12 +17,10 @@ const ACTIONS = {
 # Player
 @onready var player: CharacterBody2D = get_parent()
 @onready var sprite: AnimatedSprite2D = $"../AnimatedSprite2D"
-@onready var hitboxes: Node2D = $"../HitBoxes"
 
 # Hitboxes
 @onready var attack_1_hit_box: Area2D = $"../HitBoxes/Attack1HitBox"
 @onready var attack_2_hit_box: Area2D = $"../HitBoxes/Attack2HitBox"
-@onready var block_area: Area2D = $"../HitBoxes/BlockArea"
 
 # Collisions
 @onready var attack_1_collision: CollisionShape2D = $"../HitBoxes/Attack1HitBox/CollisionShape2D"
@@ -40,6 +38,7 @@ var is_dead := false
 func _ready() -> void:
 	health = max_health
 	HUD.update_health(health, max_health)
+	
 	attacks = [
 		AttackData.new("attack1", attack_1_hit_box, attack_1_collision, [4, 5], attack_1_damage),
 		AttackData.new("attack2", attack_2_hit_box, attack_2_collision, [3, 4], attack_2_damage),
@@ -85,7 +84,6 @@ func start_action(animation_name: String) -> void:
 func on_animation_finished(anim_name: String) -> void:
 	if anim_name in ACTIONS.values() or anim_name == "hurt":
 		is_busy = false
-		
 	elif anim_name == "death":
 		player.queue_free()
 

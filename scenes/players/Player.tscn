@@ -481,6 +481,6 @@ shape = SubResource("RectangleShape2D_10fes")
 [node name="Combat" type="Node2D" parent="." unique_id=1052116444]
 visible = false
 script = ExtResource("10_euj1c")
-attack_1_damage = 80
+attack_1_damage = 100
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

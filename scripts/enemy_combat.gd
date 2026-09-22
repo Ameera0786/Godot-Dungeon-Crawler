@@ -17,6 +17,7 @@ extends Node2D
 
 # Variables
 var health: int
+var player: CharacterBody2D = null
 var is_attacking := false
 var is_dead := false
 var is_hurt := false
@@ -31,16 +32,22 @@ func _ready() -> void:
 	sprite.animation_finished.connect(_on_sprite_animation_finished)
 
 # See if enemy can attack
-func check_attack(player: CharacterBody2D) -> void:
+func check_attack(target_player: CharacterBody2D) -> void:
+	if target_player != null:
+		player = target_player
+	
 	if player == null or is_attacking or is_dead:
 		return
 
 	var distance = enemy.global_position.distance_to(player.global_position)
 	if distance <= attack_range:
-		start_attack(player)
+		start_attack()
 
 # Attack player
-func start_attack(player: CharacterBody2D) -> void:
+func start_attack() -> void:
+	if is_dead or is_hurt:
+		return
+	
 	is_attacking = true
 	enemy.velocity = Vector2.ZERO
 	sprite.play("attack")
@@ -52,12 +59,9 @@ func _on_sprite_frame_changed() -> void:
 		return
 
 	attack_collision.disabled = not (sprite.frame in attack_hit_frames)
-
-func _on_sprite_animation_finished() -> void:
-	on_animation_finished(null, false)
 	
 # Animation finished
-func on_animation_finished(player: CharacterBody2D, touching_player: bool) -> void:
+func _on_sprite_animation_finished() -> void:
 	if sprite.animation == "hurt":
 		is_hurt = false
 		if player != null:
@@ -68,16 +72,15 @@ func on_animation_finished(player: CharacterBody2D, touching_player: bool) -> vo
 		is_attacking = false
 		attack_collision.disabled = true
 
-		if player != null and (
-			touching_player or enemy.global_position.distance_to(player.global_position) <= attack_range
-		):
-			await get_tree().create_timer(attack_pause).timeout
+		if player != null and not is_dead:
+			var distance = enemy.global_position.distance_to(player.global_position) 
+			if distance <= attack_range:
+				await get_tree().create_timer(attack_pause).timeout
 
-			if player != null and not is_dead and (
-				touching_player or enemy.global_position.distance_to(player.global_position) <= attack_range
-			):
-				start_attack(player)
-
+				if player != null and not is_dead and not is_hurt:
+					distance = enemy.global_position.distance_to(player.global_position) 
+					if distance <= attack_range:
+						start_attack()
 	elif sprite.animation == "death":
 		enemy.queue_free()
 
@@ -95,6 +98,9 @@ func take_damage(amount: int) -> void:
 	health -= amount
 	is_attacking = false
 	is_hurt = true
+	
+	attack_collision.disabled = true
+	
 	print("Enemy took ", amount, " damage")
 	print("Enemy health: ", health, " / ", max_health)
 
@@ -107,9 +113,13 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	if is_dead:
 		return
-	is_dead = true
 	
-	enemy.remove_from_group("enemies")
+	is_dead = true
+	is_attacking = false
+	is_hurt = false
+	
 	enemy.velocity = Vector2.ZERO
 	attack_collision.disabled = true
+	
+	enemy.remove_from_group("enemy")
 	sprite.play("death")

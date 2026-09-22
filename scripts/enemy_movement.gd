@@ -1,15 +1,17 @@
 extends CharacterBody2D
 
+# Movement
 @export_group("Movement")
 @export var speed := 70.0
 
+# Enemy
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_hit_box: Node2D = find_child("*AttackHit*", true, false)
 @onready var detection_area: Area2D = find_child("*Interaction*", true, false)
 @onready var combat: Node = $Combat
 
+# Variables
 var player: CharacterBody2D = null
-var touching_player := false
 
 # Initial load in
 func _ready() -> void:
@@ -17,7 +19,6 @@ func _ready() -> void:
 
 	detection_area.body_entered.connect(_on_detection_area_body_entered)
 	detection_area.body_exited.connect(_on_detection_area_body_exited)
-	sprite.animation_finished.connect(_on_animation_finished)
 
 # Collisions
 func _physics_process(_delta: float) -> void:
@@ -28,13 +29,6 @@ func _physics_process(_delta: float) -> void:
 	combat.check_attack(player)
 	update_animation()
 	move_and_slide()
-
-	touching_player = false
-	for i in get_slide_collision_count():
-		var collider = get_slide_collision(i).get_collider()
-		if collider == player:
-			touching_player = true
-			break
 
 # Flip enemy based on direction and move animations
 func handle_movement() -> void:
@@ -67,11 +61,12 @@ func update_animation() -> void:
 	else:
 		sprite.play("idle")
 
-# Detection Area Signals
+# Detect player entering zone
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body as CharacterBody2D
 
+# Detect player leaving zone
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body == player:
 		player = null
@@ -79,10 +74,3 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 # Delegate take_damage call from player attacks to Combat
 func take_damage(amount: int) -> void:
 	combat.take_damage(amount)
-
-func _on_animation_finished() -> void:
-	combat.on_animation_finished(player, touching_player)
-
-
-func _on_animated_sprite_2d_animation_finished() -> void:
-	pass # Replace with function body.

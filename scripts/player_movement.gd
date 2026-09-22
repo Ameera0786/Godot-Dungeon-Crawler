@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-const SPEED = 110.0
-
+# Player
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitboxes: Node2D = $HitBoxes
 @onready var combat: PlayerCombat = $Combat
 @onready var interaction_area: Area2D = $InteractionArea
 
+# Variables
+const SPEED = 210.0
 var current_interactable: Node2D = null
 
 # Initial load in
@@ -19,7 +20,7 @@ func _ready() -> void:
 	interaction_area.body_entered.connect(_on_interaction_body_entered)
 	interaction_area.body_exited.connect(_on_interaction_body_exited)
 
-# Handle all actions and checks, initial calls
+# Handle actions and movement
 func _physics_process(_delta: float) -> void:
 	if combat.is_dead:
 		return
@@ -53,24 +54,28 @@ func handle_interaction_input() -> void:
 	if Input.is_action_just_pressed("interact"):
 		interact()
 
-# Interact 
+# Interact with current target
 func interact() -> void:
 	if current_interactable and current_interactable.has_method("interact"):
 		current_interactable.interact()
 
+# Interaction area entered
 func _on_interaction_area_entered(area: Area2D) -> void:
 	_check_and_set_interactable(area)
 
+# Interaction body entered
 func _on_interaction_body_entered(body: Node2D) -> void:
 	_check_and_set_interactable(body)
 
+# Interaction area exited
 func _on_interaction_area_exited(area: Area2D) -> void:
 	_check_and_clear_interactable(area)
 
+# Interation body exited
 func _on_interaction_body_exited(body: Node2D) -> void:
 	_check_and_clear_interactable(body)
 
-# Check if target in interactable group
+# Check if target is interactable
 func _check_and_set_interactable(target: Node2D) -> void:
 	var candidate = target
 	if not candidate.is_in_group("interactable") and candidate.get_parent():
@@ -78,6 +83,7 @@ func _check_and_set_interactable(target: Node2D) -> void:
 
 	if candidate.is_in_group("interactable"):
 		current_interactable = candidate
+		
 		if current_interactable.has_method("show_prompt"):
 			current_interactable.show_prompt(true)
 
