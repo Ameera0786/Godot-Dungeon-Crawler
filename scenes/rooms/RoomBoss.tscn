@@ -600,3 +600,4 @@ position = Vector2(946, 389)
 scale = Vector2(4, 4)
 
 [node name="RoomEntry" parent="." unique_id=671535244 instance=ExtResource("3_jpgyn")]
+is_boss_room = true

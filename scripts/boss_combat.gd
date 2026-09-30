@@ -9,6 +9,9 @@ extends Node2D
 # Fireball
 @export_group("Resources")
 @export var fireball_scene: PackedScene 
+@onready var attack_sound: AudioStreamPlayer = $"../AttackSound"
+@onready var death_sound: AudioStreamPlayer = $"../DeathSound"
+@onready var hurt_sound: AudioStreamPlayer = $"../HurtSound"
 
 # Boss
 @onready var boss: CharacterBody2D = get_parent()
@@ -50,6 +53,7 @@ func shoot_fireball() -> void:
 	
 	animated_sprite.play("attack")
 	create_fireball()
+	attack_sound.play()
 	
 	await get_tree().create_timer(0.5).timeout
 	is_attacking = false
@@ -85,6 +89,7 @@ func take_damage(amount: int) -> void:
 	else:
 		is_hurt = true
 		animated_sprite.play("hurt")
+		hurt_sound.play()
 
 # Boss dies
 func die() -> void:
@@ -97,3 +102,4 @@ func die() -> void:
 	
 	boss.remove_from_group("enemy")
 	animated_sprite.play("death")
+	death_sound.play()

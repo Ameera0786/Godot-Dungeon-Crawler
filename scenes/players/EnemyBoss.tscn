@@ -22,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://e7omrrqbmwi5" path="res://assets/characters/enemies/Little_Demon/Walk/Little_demon_walk4.png" id="19_r2nl7"]
 [ext_resource type="Script" uid="uid://ibm2hauklm14" path="res://scripts/boss_combat.gd" id="22_x2s1n"]
 [ext_resource type="PackedScene" uid="uid://b0sgrmag1nisw" path="res://scenes/players/fireball.tscn" id="23_u7nc5"]
+[ext_resource type="AudioStream" uid="uid://d4ev7j21ynsgp" path="res://assets/VFX/boss_attack.wav" id="24_4poal"]
+[ext_resource type="AudioStream" uid="uid://co5ut24ekfk3a" path="res://assets/VFX/boss_death.wav" id="25_xsbji"]
+[ext_resource type="AudioStream" uid="uid://dh83rfppsqokx" path="res://assets/VFX/hurt.wav" id="26_4c1jp"]
 [ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/shapes/circular png shadows.png" id="26_fx6s1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnknt"]
@@ -186,5 +189,14 @@ script = ExtResource("22_x2s1n")
 max_health = 500
 attack_range = 300.0
 fireball_scene = ExtResource("23_u7nc5")
+
+[node name="AttackSound" type="AudioStreamPlayer" parent="." unique_id=670650826]
+stream = ExtResource("24_4poal")
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1766860658]
+stream = ExtResource("25_xsbji")
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="." unique_id=674189018]
+stream = ExtResource("26_4c1jp")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

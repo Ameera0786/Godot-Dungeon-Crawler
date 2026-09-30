@@ -8,6 +8,9 @@ extends Node2D
 @export var attack_range := 50.0
 @export var attack_pause := 0.4
 @export var attack_hit_frames: Array[int] = [4, 5]
+@onready var attack_sound: AudioStreamPlayer = $"../AttackSound"
+@onready var death_sound: AudioStreamPlayer = $"../DeathSound"
+@onready var hurt_sound: AudioStreamPlayer = $"../HurtSound"
 
 # Enemy
 @onready var enemy: CharacterBody2D = get_parent()
@@ -45,12 +48,15 @@ func check_attack(target_player: CharacterBody2D) -> void:
 
 # Attack player
 func start_attack() -> void:
-	if is_dead or is_hurt:
+	if is_dead or is_hurt or is_attacking:
 		return
 	
 	is_attacking = true
 	enemy.velocity = Vector2.ZERO
 	sprite.play("attack")
+	await get_tree().create_timer(0.45).timeout
+	attack_sound.play()
+	
 
 # Disable frames as needed
 func _on_sprite_frame_changed() -> void:
@@ -108,6 +114,7 @@ func take_damage(amount: int) -> void:
 		die()
 	else:
 		sprite.play("hurt")
+		hurt_sound.play()
 
 # Enemy dies
 func die() -> void:
@@ -123,3 +130,5 @@ func die() -> void:
 	
 	enemy.remove_from_group("enemy")
 	sprite.play("death")
+	death_sound.play()
+	

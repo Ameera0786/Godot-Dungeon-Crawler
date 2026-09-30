@@ -603,3 +603,4 @@ position = Vector2(654, 340)
 position = Vector2(1098, 277)
 
 [node name="RoomEntry" parent="." unique_id=671535244 instance=ExtResource("4_23yxr")]
+enemy_group_name = null

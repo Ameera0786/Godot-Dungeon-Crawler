@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bboru1t6mstb1" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball3.png" id="4_lh2dm"]
 [ext_resource type="Texture2D" uid="uid://cnjls1esiureh" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball4.png" id="5_8i61h"]
 [ext_resource type="Texture2D" uid="uid://cy3dmgkh8lkvp" path="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball5.png" id="6_r787y"]
+[ext_resource type="AudioStream" uid="uid://d0o2m8tyx36f6" path="res://assets/VFX/fireball_impact.wav" id="7_yk8l0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhjxt"]
 size = Vector2(28.75, 15)
@@ -49,5 +50,8 @@ position = Vector2(-3, -1.5)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_m5k6n")
 animation = &"fireball"
+
+[node name="ImpactSound" type="AudioStreamPlayer" parent="." unique_id=1801128613]
+stream = ExtResource("7_yk8l0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

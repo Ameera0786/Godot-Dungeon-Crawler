@@ -5,6 +5,7 @@ extends Area2D
 
 # Exports
 @export var enemy_group_name: String = "enemy"
+@export var is_boss_room: bool = false
 
 # Variables
 var is_locked: bool = false
@@ -27,6 +28,10 @@ func check_initial_overlap() -> void:
 # Add body to area when they enter room
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		if is_boss_room:
+			MusicManager.play_boss_music()
+		else:
+			MusicManager.play_dungeon_music()
 		try_lock_room()
 
 # Attempt to lock the room, enemies > 0

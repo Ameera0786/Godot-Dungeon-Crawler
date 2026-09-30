@@ -6,11 +6,23 @@ var hit_box: Area2D
 var collision: CollisionShape2D
 var active_frames: Array[int]
 var damage: int
+var sound: AudioStream
+var sound_delay: float
 
-func _init(p_animation: String, p_hit_box: Area2D, p_collision: CollisionShape2D,
-		p_active_frames: Array[int], p_damage: int) -> void:
-	animation = p_animation
-	hit_box = p_hit_box
-	collision = p_collision
-	active_frames = p_active_frames
-	damage = p_damage
+# Data class for attacks
+func _init(
+	animation_name: String,
+	attack_hit_box: Area2D,
+	attack_collision: CollisionShape2D,
+	frames: Array[int],
+	attack_damage: int,
+	attack_sound: AudioStream,
+	delay: float,
+) -> void:
+	animation = animation_name
+	hit_box = attack_hit_box
+	collision = attack_collision
+	active_frames = frames
+	damage = attack_damage
+	sound = attack_sound
+	sound_delay = delay

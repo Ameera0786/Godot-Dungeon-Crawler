@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d3gv5sdyixx22" path="res://scenes/rooms/RoomTrap.tscn" id="3_g6nef"]
 [ext_resource type="PackedScene" uid="uid://c60ljgm775u4" path="res://scenes/rooms/RoomBoss.tscn" id="4_24j5q"]
 [ext_resource type="PackedScene" uid="uid://camjpjiois50t" path="res://scenes/players/Player.tscn" id="5_bflcn"]
+[ext_resource type="PackedScene" uid="uid://chiagbjs2dq2k" path="res://scenes/UI/DeathMenu.tscn" id="6_30tst"]
 
 [node name="Test" type="Node2D" unique_id=12160468]
 
@@ -21,3 +22,5 @@ position = Vector2(3826, -2)
 
 [node name="Player" parent="." unique_id=1588146620 instance=ExtResource("5_bflcn")]
 position = Vector2(223, 365)
+
+[node name="DeathMenu" parent="." unique_id=1037620619 instance=ExtResource("6_30tst")]

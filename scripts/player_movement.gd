@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var interaction_area: Area2D = $InteractionArea
 
 # Variables
-const SPEED = 210.0
+@export var speed = 110.0
 var current_interactable: Node2D = null
 
 # Initial load in
@@ -34,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 # Flip character based on direction and move animations
 func handle_movement() -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * SPEED
+	velocity = direction * speed
 
 	if direction.x < 0:
 		sprite.flip_h = true

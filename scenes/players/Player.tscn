@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dgkr6k0iyioo0" path="res://assets/characters/players/Human_Soldier_Sword_Shield_NPC/Human_Soldier_Sword_Shield_Walk-Sheet.png" id="7_hfjmt"]
 [ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/shapes/circular png shadows.png" id="9_2p6f4"]
 [ext_resource type="Script" uid="uid://dlghl0q65ntr6" path="res://scripts/player_combat.gd" id="10_euj1c"]
+[ext_resource type="AudioStream" uid="uid://bb8hnk5te5yxh" path="res://assets/VFX/human_death.wav" id="11_6bi8e"]
+[ext_resource type="AudioStream" uid="uid://bygaeh78ef75h" path="res://assets/VFX/human_block.wav" id="12_gyri4"]
+[ext_resource type="AudioStream" uid="uid://dh83rfppsqokx" path="res://assets/VFX/hurt.wav" id="13_j642q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2mfi"]
 atlas = ExtResource("1_6n4dj")
@@ -482,5 +485,16 @@ shape = SubResource("RectangleShape2D_10fes")
 visible = false
 script = ExtResource("10_euj1c")
 attack_1_damage = 100
+
+[node name="AttackSound" type="AudioStreamPlayer" parent="." unique_id=1907652388]
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=905724241]
+stream = ExtResource("11_6bi8e")
+
+[node name="BlockSound" type="AudioStreamPlayer" parent="." unique_id=844355906]
+stream = ExtResource("12_gyri4")
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="." unique_id=1328127997]
+stream = ExtResource("13_j642q")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

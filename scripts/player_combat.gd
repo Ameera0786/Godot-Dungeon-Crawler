@@ -17,6 +17,14 @@ const ACTIONS = {
 # Player
 @onready var player: CharacterBody2D = get_parent()
 @onready var sprite: AnimatedSprite2D = $"../AnimatedSprite2D"
+@onready var attack_sound: AudioStreamPlayer = $"../AttackSound"
+@onready var death_sound: AudioStreamPlayer = $"../DeathSound"
+@onready var block_sound: AudioStreamPlayer = $"../BlockSound"
+@onready var hurt_sound: AudioStreamPlayer = $"../HurtSound"
+
+# Sounds
+var attack_1_sound = preload("res://assets/VFX/human_attack1.wav")
+var attack_2_sound = preload("res://assets/VFX/human_attack2.wav")
 
 # Hitboxes
 @onready var attack_1_hit_box: Area2D = $"../HitBoxes/Attack1HitBox"
@@ -38,10 +46,10 @@ var is_dead := false
 func _ready() -> void:
 	health = max_health
 	HUD.update_health(health, max_health)
-	
+
 	attacks = [
-		AttackData.new("attack1", attack_1_hit_box, attack_1_collision, [4, 5], attack_1_damage),
-		AttackData.new("attack2", attack_2_hit_box, attack_2_collision, [3, 4], attack_2_damage),
+		AttackData.new("attack1", attack_1_hit_box, attack_1_collision, [4, 5], attack_1_damage, attack_1_sound, 0.55),
+		AttackData.new("attack2", attack_2_hit_box, attack_2_collision, [3, 4], attack_2_damage, attack_2_sound, 0.10)
 	]
 
 	for attack in attacks:
@@ -66,7 +74,7 @@ func _process(_delta: float) -> void:
 
 # Action pressed
 func handle_combat_actions() -> bool:
-	if is_dead:
+	if is_dead or is_busy:
 		return false
 
 	for action in ACTIONS:
@@ -79,13 +87,26 @@ func handle_combat_actions() -> bool:
 func start_action(animation_name: String) -> void:
 	is_busy = true
 	sprite.play(animation_name)
+	
+	for attack in attacks:
+		if attack.animation == animation_name:
+			await get_tree().create_timer(attack.sound_delay).timeout
+			attack_sound.stream = attack.sound
+			attack_sound.play()
+			return
+
+	if animation_name == "block":
+		await get_tree().create_timer(0.30).timeout
+		block_sound.play()
 
 # Animation finished
 func on_animation_finished(anim_name: String) -> void:
 	if anim_name in ACTIONS.values() or anim_name == "hurt":
 		is_busy = false
 	elif anim_name == "death":
-		player.queue_free()
+		get_tree().paused = true
+		get_tree().current_scene.get_node("DeathMenu").show_menu()
+
 
 # Player close enough to enemy 
 func _on_attack_hit_box_body_entered(body: Node2D, attack: AttackData) -> void:
@@ -107,6 +128,7 @@ func take_damage(amount: int) -> void:
 	else:
 		is_busy = true
 		sprite.play("hurt")
+		hurt_sound.play()
 
 # Player dies
 func die() -> void:
@@ -116,3 +138,4 @@ func die() -> void:
 		attack.collision.disabled = true
 	block_collision.disabled = true
 	sprite.play("death")
+	death_sound.play()
