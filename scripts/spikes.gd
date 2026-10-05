@@ -8,7 +8,7 @@ extends TileMapLayer
 var can_damage := true
 
 # Checks every frame if player is on spike, if so, damage
-func _process(delta): 
+func _process(_delta): 
 	if not can_damage:
 		return
 		
@@ -17,7 +17,6 @@ func _process(delta):
 		return
 	
 	for cell in get_used_cells():
-		var tile_data = get_cell_tile_data(cell)
 		var spike = to_global(map_to_local(cell))
 		
 		if player.global_position.distance_to(spike) <= damage_radius:

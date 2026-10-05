@@ -61,10 +61,10 @@ func start_attack() -> void:
 # Disable frames as needed
 func _on_sprite_frame_changed() -> void:
 	if sprite.animation != "attack":
-		attack_collision.disabled = true
+		attack_collision.set_deferred("disabled", true)
 		return
 
-	attack_collision.disabled = not (sprite.frame in attack_hit_frames)
+	attack_collision.set_deferred("disabled", not (sprite.frame in attack_hit_frames))
 	
 # Animation finished
 func _on_sprite_animation_finished() -> void:
@@ -76,8 +76,8 @@ func _on_sprite_animation_finished() -> void:
 			sprite.play("idle") 
 	elif sprite.animation == "attack":
 		is_attacking = false
-		attack_collision.disabled = true
-
+		attack_collision.set_deferred("disabled", true)
+		
 		if player != null and not is_dead:
 			var distance = enemy.global_position.distance_to(player.global_position) 
 			if distance <= attack_range:
@@ -105,7 +105,7 @@ func take_damage(amount: int) -> void:
 	is_attacking = false
 	is_hurt = true
 	
-	attack_collision.disabled = true
+	attack_collision.set_deferred("disabled", not (sprite.frame in attack_hit_frames))
 	
 	print("Enemy took ", amount, " damage")
 	print("Enemy health: ", health, " / ", max_health)
@@ -126,7 +126,7 @@ func die() -> void:
 	is_hurt = false
 	
 	enemy.velocity = Vector2.ZERO
-	attack_collision.disabled = true
+	attack_collision.set_deferred("disabled", true)
 	
 	enemy.remove_from_group("enemy")
 	sprite.play("death")

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c5ucsikxpou0t"]
 
 [ext_resource type="Script" uid="uid://bufq7s8bk2tl" path="res://scripts/hud.gd" id="1_4ucgc"]
+[ext_resource type="Texture2D" uid="uid://e150v2x8t081" path="res://assets/UI/settings_button.png" id="2_yl4mc"]
+[ext_resource type="PackedScene" uid="uid://bdll064d8jvax" path="res://scenes/UI/settings_menu.tscn" id="3_vr1b1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1b1"]
 border_width_left = 2
@@ -66,3 +68,17 @@ grow_horizontal = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_vr1b1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_4ucgc")
 show_percentage = false
+
+[node name="SettingsButton" type="TextureButton" parent="." unique_id=1969031225]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_yl4mc")
+texture_pressed = ExtResource("2_yl4mc")
+texture_hover = ExtResource("2_yl4mc")
+
+[node name="SettingsMenu" parent="." unique_id=1287252664 instance=ExtResource("3_vr1b1")]

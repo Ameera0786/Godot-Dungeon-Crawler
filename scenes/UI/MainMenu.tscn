@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://gbxchxdo12jp"]
 
+[ext_resource type="Script" uid="uid://cclyh4a8lgn6u" path="res://scripts/main_menu.gd" id="1_11hie"]
+[ext_resource type="Texture2D" uid="uid://dxwigbjxrq85o" path="res://assets/UI/chamber_and_bone_main_menu.png" id="2_3h7gc"]
+[ext_resource type="Texture2D" uid="uid://hu110yk4xjfo" path="res://assets/UI/button.png" id="3_4vh8y"]
+[ext_resource type="PackedScene" uid="uid://bdll064d8jvax" path="res://scenes/UI/settings_menu.tscn" id="4_4vh8y"]
+
 [node name="MainMenu" type="Control" unique_id=487317699]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +12,68 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_11hie")
+
+[node name="Background" type="TextureRect" parent="." unique_id=286458369]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3h7gc")
+expand_mode = 2
+
+[node name="MainContainer" type="VBoxContainer" parent="Background" unique_id=1666683236]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -291.00003
+offset_right = 550.6667
+offset_bottom = -56.333374
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+theme_override_constants/separation = 10
+
+[node name="StartButton" type="Button" parent="Background/MainContainer" unique_id=1579511295]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("3_4vh8y")
+
+[node name="Label" type="Label" parent="Background/MainContainer/StartButton" unique_id=755782989]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.6509804, 0.3254902, 1)
+theme_override_font_sizes/font_size = 32
+text = "Start Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="Background/MainContainer" unique_id=1418781431]
+layout_mode = 2
+icon = ExtResource("3_4vh8y")
+
+[node name="Label" type="Label" parent="Background/MainContainer/SettingsButton" unique_id=2026397132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.6509804, 0.3254902, 1)
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsMenu" parent="." unique_id=1287252664 instance=ExtResource("4_4vh8y")]
+
+[connection signal="pressed" from="Background/MainContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Background/MainContainer/SettingsButton" to="." method="_on_settings_button_pressed"]

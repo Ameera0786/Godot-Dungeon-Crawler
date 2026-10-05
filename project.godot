@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Final Project Rooms"
-run/main_scene="uid://bugbkmgtyb8o7"
+run/main_scene="uid://gbxchxdo12jp"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*uid://j3d2vkjtpp2o"
 HUD="*uid://c5ucsikxpou0t"
 MusicManager="*uid://6ne8ge2hpkb3"
+Settings="*uid://b688300di5ona"
 
 [display]
 

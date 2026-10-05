@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvuxsuk4a7khp"]
 
-[ext_resource type="Script" uid="uid://bu4e676d3wnsv" path="res://scripts/lockRoom.gd" id="1_qf6ue"]
+[ext_resource type="Script" uid="uid://bu4e676d3wnsv" path="res://scripts/lock_room.gd" id="1_qf6ue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fw705"]
 size = Vector2(1150, 610)

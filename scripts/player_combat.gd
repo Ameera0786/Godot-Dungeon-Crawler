@@ -132,10 +132,12 @@ func take_damage(amount: int) -> void:
 
 # Player dies
 func die() -> void:
+	if is_dead:
+		return
 	is_dead = true
 	player.velocity = Vector2.ZERO
 	for attack in attacks:
-		attack.collision.disabled = true
-	block_collision.disabled = true
+		attack.collision.set_deferred("disabled", true)
+	block_collision.set_deferred("disabled", true)
 	sprite.play("death")
 	death_sound.play()
