@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*uid://j3d2vkjtpp2o"
 HUD="*uid://c5ucsikxpou0t"
 MusicManager="*uid://6ne8ge2hpkb3"
-Settings="*uid://b688300di5ona"
+Settings="*uid://cvpcdotfdpgtf"
 
 [display]
 
