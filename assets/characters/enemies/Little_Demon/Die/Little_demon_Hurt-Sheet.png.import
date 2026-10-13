@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bx3tui7do6r4s"
-path="res://.godot/imported/Little_demon_Hurt-Sheet.png-f7bb206df0687c75905a6663495571fe.ctex"
+path="res://.godot/imported/Little_demon_Hurt-Sheet.png-f8cab697b32f76ebf25611e3f7b4e668.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Little_Demon/Die/Little_demon_Hurt-Sheet.png"
-dest_files=["res://.godot/imported/Little_demon_Hurt-Sheet.png-f7bb206df0687c75905a6663495571fe.ctex"]
+source_file="res://assets/characters/enemies/little_demon/die/Little_demon_Hurt-Sheet.png"
+dest_files=["res://.godot/imported/Little_demon_Hurt-Sheet.png-f8cab697b32f76ebf25611e3f7b4e668.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqvpu6yeqb2ov"
-path="res://.godot/imported/Monster_Slime_Jump_Fall-Sheet.png-b2daa456ee215f7e73f9093a98bad2a3.ctex"
+path="res://.godot/imported/Monster_Slime_Jump_Fall-Sheet.png-83bd662d709fec21b41ffeb42d055833.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Monster_Slime/Monster_Slime_Jump_Fall-Sheet.png"
-dest_files=["res://.godot/imported/Monster_Slime_Jump_Fall-Sheet.png-b2daa456ee215f7e73f9093a98bad2a3.ctex"]
+source_file="res://assets/characters/enemies/monster_slime/Monster_Slime_Jump_Fall-Sheet.png"
+dest_files=["res://.godot/imported/Monster_Slime_Jump_Fall-Sheet.png-83bd662d709fec21b41ffeb42d055833.ctex"]
 
 [params]
 

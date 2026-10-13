@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c60ljgm775u4"]
 
 [ext_resource type="Texture2D" uid="uid://dlv8im3i6qw5j" path="res://assets/tilemaps/Dungeon tileset.png" id="1_jpgyn"]
-[ext_resource type="PackedScene" uid="uid://o8g8qp4dbb3p" path="res://scenes/players/EnemyBoss.tscn" id="2_urjwk"]
+[ext_resource type="PackedScene" uid="uid://o8g8qp4dbb3p" path="res://scenes/players/Enemy_boss.tscn" id="2_urjwk"]
 [ext_resource type="PackedScene" uid="uid://dvuxsuk4a7khp" path="res://scenes/rooms/RoomEntry.tscn" id="3_jpgyn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25w3c"]

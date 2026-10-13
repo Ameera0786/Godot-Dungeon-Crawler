@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3v8b4r7sgc1j"
-path="res://.godot/imported/Arrow01(32x32).png-8ccefd5eb7c25bbf9959187f10e6edeb.ctex"
+uid="uid://bk2g6isvognwr"
+path="res://.godot/imported/Arrow01(100x100).png-eb8a60e9af8842b4f23d114dabfccbc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Arrows/Arrow01(32x32).png"
-dest_files=["res://.godot/imported/Arrow01(32x32).png-8ccefd5eb7c25bbf9959187f10e6edeb.ctex"]
+source_file="res://assets/characters/projectiles/Arrow01(100x100).png"
+dest_files=["res://.godot/imported/Arrow01(100x100).png-eb8a60e9af8842b4f23d114dabfccbc9.ctex"]
 
 [params]
 

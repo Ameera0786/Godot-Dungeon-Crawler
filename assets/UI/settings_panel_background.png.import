@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhsqxla6htuhr"
-path="res://.godot/imported/_fire_ball-Sheet.png-8877b505d6a92b4f6cfbfbd393ffe2e9.ctex"
+uid="uid://btr5linoixp6a"
+path="res://.godot/imported/settings_panel_background.png-654c31dd50d0f742b0a29e89564f4e89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Little_Demon/Fire Ball/_fire_ball-Sheet.png"
-dest_files=["res://.godot/imported/_fire_ball-Sheet.png-8877b505d6a92b4f6cfbfbd393ffe2e9.ctex"]
+source_file="res://assets/UI/settings_panel_background.png"
+dest_files=["res://.godot/imported/settings_panel_background.png-654c31dd50d0f742b0a29e89564f4e89.ctex"]
 
 [params]
 

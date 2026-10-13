@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhl6osbtcgrm3"
-path="res://.godot/imported/Little_demon_die2.png-60d493b47605e7363c5b3b16dfa648a8.ctex"
+path="res://.godot/imported/Little_demon_die2.png-8cb908e37d4a995e322952f567e911aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Little_Demon/Die/Little_demon_die2.png"
-dest_files=["res://.godot/imported/Little_demon_die2.png-60d493b47605e7363c5b3b16dfa648a8.ctex"]
+source_file="res://assets/characters/enemies/little_demon/die/Little_demon_die2.png"
+dest_files=["res://.godot/imported/Little_demon_die2.png-8cb908e37d4a995e322952f567e911aa.ctex"]
 
 [params]
 

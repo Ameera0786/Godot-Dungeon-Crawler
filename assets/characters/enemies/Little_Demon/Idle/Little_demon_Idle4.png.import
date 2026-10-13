@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br007ajtoagja"
-path="res://.godot/imported/Little_demon_Idle4.png-52a9801dc055f9d245edc488108b3b41.ctex"
+path="res://.godot/imported/Little_demon_Idle4.png-5ec9d93c6ba97319dd7cc7b0be43249c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Little_Demon/Idle/Little_demon_Idle4.png"
-dest_files=["res://.godot/imported/Little_demon_Idle4.png-52a9801dc055f9d245edc488108b3b41.ctex"]
+source_file="res://assets/characters/enemies/little_demon/idle/Little_demon_Idle4.png"
+dest_files=["res://.godot/imported/Little_demon_Idle4.png-5ec9d93c6ba97319dd7cc7b0be43249c.ctex"]
 
 [params]
 

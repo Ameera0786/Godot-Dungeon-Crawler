@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bwrimfwrx1rde"]
+
+[ext_resource type="Script" uid="uid://dnfy3iidmq5f3" path="res://scripts/skill_tree_menu.gd" id="1_21uuw"]
+
+[node name="SkillTreeMenu" type="CanvasLayer" unique_id=689671359]
+script = ExtResource("1_21uuw")
+
+[node name="Background" type="TextureRect" parent="." unique_id=573986965]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NodeMap" type="CenterContainer" parent="." unique_id=1550195315]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TreeRoot" type="Control" parent="NodeMap" unique_id=1186869248]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="NodeMap/TreeRoot" unique_id=1432810519]
+
+[node name="TextureButton" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=933389923]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton2" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=1277972385]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton3" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=1436273287]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton4" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=175297020]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton5" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=491227699]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton6" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=851646956]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton7" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=1029558309]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeaderContainer" type="Panel" parent="." unique_id=2058035243]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SoulsLabel" type="Label" parent="HeaderContainer" unique_id=788312530]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

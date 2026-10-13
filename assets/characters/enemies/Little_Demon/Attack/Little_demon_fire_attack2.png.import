@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bws2lb7ik4t3v"
-path="res://.godot/imported/Little_demon_fire_attack2.png-4fc4247c0e132b0ecd10c7406f5b11ee.ctex"
+path="res://.godot/imported/Little_demon_fire_attack2.png-e35c04ff9737ea7971eef7776d0791da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Little_Demon/Attack/Little_demon_fire_attack2.png"
-dest_files=["res://.godot/imported/Little_demon_fire_attack2.png-4fc4247c0e132b0ecd10c7406f5b11ee.ctex"]
+source_file="res://assets/characters/enemies/little_demon/attack/Little_demon_fire_attack2.png"
+dest_files=["res://.godot/imported/Little_demon_fire_attack2.png-e35c04ff9737ea7971eef7776d0791da.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dlv8im3i6qw5j" path="res://assets/tilemaps/Dungeon tileset.png" id="1_cbo1f"]
 [ext_resource type="PackedScene" uid="uid://bbecvofa5fp0g" path="res://scenes/players/NPC.tscn" id="2_7xxxi"]
 [ext_resource type="PackedScene" uid="uid://dvuxsuk4a7khp" path="res://scenes/rooms/RoomEntry.tscn" id="4_23yxr"]
-[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/EnemySlime.tscn" id="5_cbo1f"]
+[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/Enemy_slime.tscn" id="5_cbo1f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25w3c"]
 texture = ExtResource("1_cbo1f")

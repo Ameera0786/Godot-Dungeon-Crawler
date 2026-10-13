@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dlv8im3i6qw5j" path="res://assets/tilemaps/Dungeon tileset.png" id="1_1qlum"]
 [ext_resource type="PackedScene" uid="uid://camjpjiois50t" path="res://scenes/players/Player.tscn" id="2_c3jbo"]
 [ext_resource type="PackedScene" uid="uid://bbecvofa5fp0g" path="res://scenes/players/NPC.tscn" id="3_jkg4i"]
-[ext_resource type="PackedScene" uid="uid://x723ia7cdt7t" path="res://scenes/players/EnemyOrc.tscn" id="4_yc3ob"]
-[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/EnemySlime.tscn" id="5_tr5q3"]
+[ext_resource type="PackedScene" uid="uid://x723ia7cdt7t" path="res://scenes/players/Enemy_orc.tscn" id="4_yc3ob"]
+[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/Enemy_slime.tscn" id="5_tr5q3"]
 [ext_resource type="PackedScene" uid="uid://d3gv5sdyixx22" path="res://scenes/rooms/RoomTrap.tscn" id="6_c3jbo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25w3c"]

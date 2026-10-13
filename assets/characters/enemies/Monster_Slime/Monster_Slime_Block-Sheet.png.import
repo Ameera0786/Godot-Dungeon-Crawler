@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cedjjhcrdyima"
-path="res://.godot/imported/Monster_Slime_Block-Sheet.png-8765a849ca1ed99ef3a6d8ad3868d4d8.ctex"
+path="res://.godot/imported/Monster_Slime_Block-Sheet.png-a21bdd19d7df56fa7576cf4c5603069e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Monster_Slime/Monster_Slime_Block-Sheet.png"
-dest_files=["res://.godot/imported/Monster_Slime_Block-Sheet.png-8765a849ca1ed99ef3a6d8ad3868d4d8.ctex"]
+source_file="res://assets/characters/enemies/monster_slime/Monster_Slime_Block-Sheet.png"
+dest_files=["res://.godot/imported/Monster_Slime_Block-Sheet.png-a21bdd19d7df56fa7576cf4c5603069e.ctex"]
 
 [params]
 

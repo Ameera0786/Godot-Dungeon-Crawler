@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duyab73u5reqt"
-path="res://.godot/imported/x_button_pressed.png-39348c93176c27b1432604caf29afb0b.ctex"
+uid="uid://d4kdlpkxuil0h"
+path="res://.godot/imported/_fire_ball2.png-cad8ea35fcc65091e61ae5eaebff9f59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/x_button_pressed.png"
-dest_files=["res://.godot/imported/x_button_pressed.png-39348c93176c27b1432604caf29afb0b.ctex"]
+source_file="res://assets/characters/enemies/little_demon/fire_ball/_fire_ball2.png"
+dest_files=["res://.godot/imported/_fire_ball2.png-cad8ea35fcc65091e61ae5eaebff9f59.ctex"]
 
 [params]
 

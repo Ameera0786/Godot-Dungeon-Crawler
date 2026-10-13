@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cns8ub2uusvaw"
-path="res://.godot/imported/Little_demon_walk-Sheet.png-630d428746d808089f301b0aabccf31a.ctex"
+path="res://.godot/imported/Little_demon_walk-Sheet.png-57670e574dda9bed60ddccc46153edd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Little_Demon/Walk/Little_demon_walk-Sheet.png"
-dest_files=["res://.godot/imported/Little_demon_walk-Sheet.png-630d428746d808089f301b0aabccf31a.ctex"]
+source_file="res://assets/characters/enemies/little_demon/walk/Little_demon_walk-Sheet.png"
+dest_files=["res://.godot/imported/Little_demon_walk-Sheet.png-57670e574dda9bed60ddccc46153edd5.ctex"]
 
 [params]
 

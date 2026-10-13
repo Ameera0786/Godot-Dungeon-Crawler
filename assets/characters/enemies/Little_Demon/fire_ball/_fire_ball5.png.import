@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk2g6isvognwr"
-path="res://.godot/imported/Arrow01(100x100).png-31316e7a6f1263899e9f0ab54bf18017.ctex"
+uid="uid://cy3dmgkh8lkvp"
+path="res://.godot/imported/_fire_ball5.png-7d3efd7c132657728928bbde14730032.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Arrows/Arrow01(100x100).png"
-dest_files=["res://.godot/imported/Arrow01(100x100).png-31316e7a6f1263899e9f0ab54bf18017.ctex"]
+source_file="res://assets/characters/enemies/little_demon/fire_ball/_fire_ball5.png"
+dest_files=["res://.godot/imported/_fire_ball5.png-7d3efd7c132657728928bbde14730032.ctex"]
 
 [params]
 

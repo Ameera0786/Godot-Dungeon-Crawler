@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q2op7yctniar"
-path="res://.godot/imported/Monster_Slime_Attack2-Sheet.png-66b284eedaa438ce3515517d67f6ce75.ctex"
+path="res://.godot/imported/Monster_Slime_Attack2-Sheet.png-061cefb47e94c33a26d1a63561414b22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemies/Monster_Slime/Monster_Slime_Attack2-Sheet.png"
-dest_files=["res://.godot/imported/Monster_Slime_Attack2-Sheet.png-66b284eedaa438ce3515517d67f6ce75.ctex"]
+source_file="res://assets/characters/enemies/monster_slime/Monster_Slime_Attack2-Sheet.png"
+dest_files=["res://.godot/imported/Monster_Slime_Attack2-Sheet.png-061cefb47e94c33a26d1a63561414b22.ctex"]
 
 [params]
 
