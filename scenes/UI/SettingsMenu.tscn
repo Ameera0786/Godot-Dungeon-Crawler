@@ -14,7 +14,8 @@ texture_margin_right = 40.0
 texture_margin_bottom = 40.0
 
 [node name="SettingsMenu" type="CanvasLayer" unique_id=1287252664]
-layer = 10
+layer = 11
+visible = false
 script = ExtResource("1_yk8t3")
 
 [node name="Dimmer" type="ColorRect" parent="." unique_id=2055321709]
@@ -25,9 +26,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5921569)
 
-[node name="SettingsPanel" type="Panel" parent="Dimmer" unique_id=797180224]
+[node name="SettingsPanel" type="Panel" parent="." unique_id=797180224]
 unique_name_in_owner = true
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,7 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_03kym")
 
-[node name="TitleLabel" type="Label" parent="Dimmer/SettingsPanel" unique_id=703237317]
+[node name="TitleLabel" type="Label" parent="SettingsPanel" unique_id=703237317]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -57,7 +57,7 @@ text = "Settings
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Rows" type="VBoxContainer" parent="Dimmer/SettingsPanel" unique_id=1797204508]
+[node name="Rows" type="VBoxContainer" parent="SettingsPanel" unique_id=1797204508]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,16 +70,16 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="VolumeRow" type="HBoxContainer" parent="Dimmer/SettingsPanel/Rows" unique_id=888862202]
+[node name="VolumeRow" type="HBoxContainer" parent="SettingsPanel/Rows" unique_id=888862202]
 layout_mode = 2
 
-[node name="VolumeLabel" type="Label" parent="Dimmer/SettingsPanel/Rows/VolumeRow" unique_id=890013579]
+[node name="VolumeLabel" type="Label" parent="SettingsPanel/Rows/VolumeRow" unique_id=890013579]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Volume
 "
 
-[node name="VolumeSlider" type="HSlider" parent="Dimmer/SettingsPanel/Rows/VolumeRow" unique_id=914718257]
+[node name="VolumeSlider" type="HSlider" parent="SettingsPanel/Rows/VolumeRow" unique_id=914718257]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -89,16 +89,16 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="BrightnessRow" type="HBoxContainer" parent="Dimmer/SettingsPanel/Rows" unique_id=1734255559]
+[node name="BrightnessRow" type="HBoxContainer" parent="SettingsPanel/Rows" unique_id=1734255559]
 layout_mode = 2
 
-[node name="BrightnessLabel" type="Label" parent="Dimmer/SettingsPanel/Rows/BrightnessRow" unique_id=2070352811]
+[node name="BrightnessLabel" type="Label" parent="SettingsPanel/Rows/BrightnessRow" unique_id=2070352811]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Brightness
 "
 
-[node name="BrightnessSlider" type="HSlider" parent="Dimmer/SettingsPanel/Rows/BrightnessRow" unique_id=1649641341]
+[node name="BrightnessSlider" type="HSlider" parent="SettingsPanel/Rows/BrightnessRow" unique_id=1649641341]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -108,7 +108,7 @@ max_value = 2.0
 step = 0.05
 value = 1.0
 
-[node name="CloseSettingsButton" type="Button" parent="Dimmer/SettingsPanel" unique_id=847638560]
+[node name="CloseButton" type="Button" parent="SettingsPanel" unique_id=847638560]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 582.0

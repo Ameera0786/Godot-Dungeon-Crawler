@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BranchData" format=3 uid="uid://vwyhs4iogw06"]
+
+[ext_resource type="Script" uid="uid://dl7tix5wku46t" path="res://scripts/data_branch.gd" id="1_0qdl7"]
+[ext_resource type="Script" uid="uid://bgdts5qujl8ax" path="res://scripts/data_skill.gd" id="2_8w4jr"]
+[ext_resource type="Resource" uid="uid://du366e5ymfd30" path="res://resources/skill/damage_flat.tres" id="3_kdy1t"]
+[ext_resource type="Resource" uid="uid://bs5742w41k117" path="res://resources/skill/damage_percent.tres" id="4_eys7n"]
+
+[resource]
+script = ExtResource("1_0qdl7")
+skills = Array[ExtResource("2_8w4jr")]([ExtResource("3_kdy1t"), ExtResource("3_kdy1t"), ExtResource("4_eys7n"), ExtResource("4_eys7n")])
+metadata/_custom_type_script = "uid://dl7tix5wku46t"

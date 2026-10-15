@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://c3cn0npne2fwp"]
+
+[ext_resource type="Texture2D" uid="uid://dds34j0edakdp" path="res://assets/UI/hex/hex_souls.png" id="1_fyi5f"]
+[ext_resource type="Script" uid="uid://bgdts5qujl8ax" path="res://scripts/data_skill.gd" id="2_1h584"]
+
+[resource]
+script = ExtResource("2_1h584")
+display_name = "Soul"
+description = "Increases soul drop by 25%
+
+"
+icon = ExtResource("1_fyi5f")
+cost = 15
+stat = &"soul"
+amount = 25.0
+metadata/_custom_type_script = "uid://bgdts5qujl8ax"

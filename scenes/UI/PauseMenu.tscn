@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://d3j0ig1p7n3hn"]
+
+[ext_resource type="Script" uid="uid://2ty8c20efcb8" path="res://scripts/pause_menu.gd" id="1_avwb0"]
+[ext_resource type="Texture2D" uid="uid://hu110yk4xjfo" path="res://assets/UI/button_panel_background.png" id="2_73e60"]
+[ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/x_button.png" id="3_onjwa"]
+[ext_resource type="PackedScene" uid="uid://bdll064d8jvax" path="res://scenes/UI/SettingsMenu.tscn" id="4_3m1qe"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b1p1q"]
+load_path = "res://.godot/imported/settings_panel.png-324bfb8fb3a0d269876aa79dd268ccff.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03kym"]
+texture = SubResource("CompressedTexture2D_b1p1q")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1287252664]
+layer = 10
+script = ExtResource("1_avwb0")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=2055321709]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5921569)
+
+[node name="PausePanel" type="Panel" parent="Dimmer" unique_id=797180224]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -160.0
+offset_right = 320.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_03kym")
+
+[node name="TitleLabel" type="Label" parent="Dimmer/PausePanel" unique_id=703237317]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -282.0
+offset_top = 18.0
+offset_right = 282.0
+offset_bottom = 86.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Game Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rows" type="VBoxContainer" parent="Dimmer/PausePanel" unique_id=1797204508]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -240.0
+offset_right = 240.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="MainMenuButton" type="TextureButton" parent="Dimmer/PausePanel/Rows" unique_id=2040200984]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("2_73e60")
+
+[node name="Label" type="Label" parent="Dimmer/PausePanel/Rows/MainMenuButton" unique_id=822720380]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -11.5
+offset_right = 44.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="TextureButton" parent="Dimmer/PausePanel/Rows" unique_id=1677105763]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("2_73e60")
+
+[node name="Label" type="Label" parent="Dimmer/PausePanel/Rows/SettingsButton" unique_id=549530343]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -11.5
+offset_right = 44.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Dimmer/PausePanel" unique_id=847638560]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 582.0
+offset_top = -3.0
+offset_right = 654.0
+offset_bottom = 69.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+icon = ExtResource("3_onjwa")
+
+[node name="SettingsMenu" parent="." unique_id=1676902416 instance=ExtResource("4_3m1qe")]
+use_dimmer = false
+
+[connection signal="pressed" from="Dimmer/PausePanel/Rows/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="Dimmer/PausePanel/Rows/SettingsButton" to="." method="_on_settings_button_pressed"]

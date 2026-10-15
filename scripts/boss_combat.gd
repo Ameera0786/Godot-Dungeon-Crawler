@@ -5,6 +5,7 @@ extends Node2D
 @export var max_health: int = 100
 @export var attack_cooldown: float = 2.0
 @export var attack_range: float = 150.0
+@export var soul_reward : float= 10.0
 
 # Fireball
 @export_group("Resources")
@@ -103,3 +104,7 @@ func die() -> void:
 	boss.remove_from_group("enemy")
 	animated_sprite.play("death")
 	death_sound.play()
+	
+	var final_souls = PlayerStats.get_stat("soul", float(soul_reward))
+	PlayerStats.add_souls(final_souls)
+	print("Player gained ", final_souls, " souls!")

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="BranchData" format=3 uid="uid://djno2361c7hca"]
+
+[ext_resource type="Script" uid="uid://dl7tix5wku46t" path="res://scripts/data_branch.gd" id="1_o1b2x"]
+[ext_resource type="Script" uid="uid://bgdts5qujl8ax" path="res://scripts/data_skill.gd" id="2_o11wd"]
+[ext_resource type="Texture2D" uid="uid://daly3ecjqddxa" path="res://assets/UI/hex/hex_speed.png" id="3_jl6ab"]
+[ext_resource type="Resource" uid="uid://un5602wf5t27" path="res://resources/skill/speed_percent.tres" id="4_lsjn5"]
+[ext_resource type="Resource" uid="uid://dll7yqvd5wtdh" path="res://resources/skill/speed_flat.tres" id="5_tiovu"]
+
+[sub_resource type="Resource" id="Resource_kele5"]
+script = ExtResource("2_o11wd")
+display_name = "Speed"
+description = "Increases movement speed"
+icon = ExtResource("3_jl6ab")
+stat = &"speed"
+amount = 10.0
+metadata/_custom_type_script = "uid://bgdts5qujl8ax"
+
+[resource]
+script = ExtResource("1_o1b2x")
+angle_deg = 270.0
+skills = Array[ExtResource("2_o11wd")]([SubResource("Resource_kele5"), ExtResource("4_lsjn5"), ExtResource("5_tiovu"), ExtResource("4_lsjn5")])
+metadata/_custom_type_script = "uid://dl7tix5wku46t"

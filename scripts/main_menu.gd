@@ -6,7 +6,7 @@ const GAME_SCENE := "res://scenes/rooms/test.tscn"
 @onready var settings_button: Button = $Background/MainContainer/SettingsButton
 @onready var skill_tree_button: Button = $Background/MainContainer/SkillTreeButton
 @onready var settings_menu: CanvasLayer = $SettingsMenu
-#@onready var skill_tree_menu: CanvasLayer = $SkillTreeMenu
+@onready var skill_tree_menu: CanvasLayer = $SkillTreeMenu
 
 # Start up, show main menu
 func _ready() -> void:
@@ -17,8 +17,8 @@ func _ready() -> void:
 	settings_button.pressed.connect(settings_menu.open)
 	settings_menu.closed.connect(settings_button.grab_focus)
 	
-	#skill_tree_button.pressed.connect(skill_tree_menu.open)
-	#skill_tree_menu.closed.connect(skill_tree_button.grab_focus)
+	skill_tree_button.pressed.connect(skill_tree_menu.open)
+	skill_tree_menu.closed.connect(skill_tree_button.grab_focus)
 	
 	start_button.grab_focus()
 
@@ -27,7 +27,3 @@ func _on_start_pressed() -> void:
 	HUD.visible = true
 	MusicManager.play_dungeon_music()
 	get_tree().change_scene_to_file(GAME_SCENE)
-
-
-func _on_skill_tree_button_pressed() -> void:
-	pass # Replace with function body.

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BranchData" format=3 uid="uid://cu0ne3nfpjg0w"]
+
+[ext_resource type="Script" uid="uid://dl7tix5wku46t" path="res://scripts/data_branch.gd" id="1_o4bej"]
+[ext_resource type="Script" uid="uid://bgdts5qujl8ax" path="res://scripts/data_skill.gd" id="2_0roog"]
+[ext_resource type="Resource" uid="uid://c3cn0npne2fwp" path="res://resources/skill/soul_percent.tres" id="3_y842v"]
+[ext_resource type="Resource" uid="uid://d3smr6jbfaxyn" path="res://resources/skill/soul_percent2.tres" id="4_n20j1"]
+
+[resource]
+script = ExtResource("1_o4bej")
+angle_deg = 180.0
+skills = Array[ExtResource("2_0roog")]([ExtResource("3_y842v"), ExtResource("3_y842v"), ExtResource("3_y842v"), ExtResource("4_n20j1")])
+metadata/_custom_type_script = "uid://dl7tix5wku46t"

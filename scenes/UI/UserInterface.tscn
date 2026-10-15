@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bufq7s8bk2tl" path="res://scripts/hud.gd" id="1_4ucgc"]
 [ext_resource type="Texture2D" uid="uid://e150v2x8t081" path="res://assets/UI/settings_button.png" id="2_yl4mc"]
-[ext_resource type="PackedScene" uid="uid://bdll064d8jvax" path="res://scenes/UI/SettingsMenu.tscn" id="3_vr1b1"]
+[ext_resource type="PackedScene" uid="uid://d3j0ig1p7n3hn" path="res://scenes/UI/PauseMenu.tscn" id="3_vr1b1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1b1"]
 border_width_left = 2
@@ -69,7 +69,23 @@ theme_override_styles/background = SubResource("StyleBoxFlat_vr1b1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_4ucgc")
 show_percentage = false
 
-[node name="SettingsButton" type="TextureButton" parent="." unique_id=1969031225]
+[node name="HealthLabel" type="Label" parent="Control/HealthBar" unique_id=2045564277]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseButton" type="TextureButton" parent="." unique_id=1969031225]
 unique_name_in_owner = true
 anchors_preset = 1
 anchor_left = 1.0
@@ -81,4 +97,4 @@ texture_normal = ExtResource("2_yl4mc")
 texture_pressed = ExtResource("2_yl4mc")
 texture_hover = ExtResource("2_yl4mc")
 
-[node name="SettingsMenu" parent="." unique_id=1287252664 instance=ExtResource("3_vr1b1")]
+[node name="PauseMenu" parent="." unique_id=1287252664 instance=ExtResource("3_vr1b1")]

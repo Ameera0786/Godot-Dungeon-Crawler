@@ -21,6 +21,7 @@ DialogueManager="*uid://j3d2vkjtpp2o"
 HUD="*uid://c5ucsikxpou0t"
 MusicManager="*uid://6ne8ge2hpkb3"
 Settings="*uid://cvpcdotfdpgtf"
+PlayerStats="*uid://brh867oxdm1ta"
 
 [display]
 

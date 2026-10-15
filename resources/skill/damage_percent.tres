@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bs5742w41k117"]
+
+[ext_resource type="Texture2D" uid="uid://b6ahkt3qlq1n6" path="res://assets/UI/hex/hex_damage.png" id="1_dksbp"]
+[ext_resource type="Script" uid="uid://bgdts5qujl8ax" path="res://scripts/data_skill.gd" id="2_fnl7m"]
+
+[resource]
+script = ExtResource("2_fnl7m")
+display_name = "Damage"
+description = "Increases damage by 10%"
+icon = ExtResource("1_dksbp")
+cost = 10
+stat = &"damage"
+amount = 10.0
+metadata/_custom_type_script = "uid://bgdts5qujl8ax"

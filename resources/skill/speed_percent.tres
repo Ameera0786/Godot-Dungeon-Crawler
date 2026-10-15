@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://un5602wf5t27"]
+
+[ext_resource type="Texture2D" uid="uid://daly3ecjqddxa" path="res://assets/UI/hex/hex_speed.png" id="1_h8lu3"]
+[ext_resource type="Script" uid="uid://bgdts5qujl8ax" path="res://scripts/data_skill.gd" id="2_v8auk"]
+
+[resource]
+script = ExtResource("2_v8auk")
+display_name = "Speed"
+description = "Increases movement speed 10"
+icon = ExtResource("1_h8lu3")
+cost = 10
+stat = &"speed"
+kind = 0
+amount = 10.0
+metadata/_custom_type_script = "uid://bgdts5qujl8ax"

@@ -1,8 +1,43 @@
 [gd_scene format=3 uid="uid://bwrimfwrx1rde"]
 
 [ext_resource type="Script" uid="uid://dnfy3iidmq5f3" path="res://scripts/skill_tree_menu.gd" id="1_21uuw"]
+[ext_resource type="Texture2D" uid="uid://c2g8jp5xsek64" path="res://assets/UI/skill_tree_background.png" id="2_irljj"]
+[ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/x_button.png" id="3_7jnyq"]
+[ext_resource type="Texture2D" uid="uid://c35aaon3yfwxi" path="res://assets/UI/icon_soul.png" id="3_7vqok"]
+[ext_resource type="Script" uid="uid://vr3iahme7o1l" path="res://scripts/skill_tree.gd" id="4_10gx6"]
+[ext_resource type="PackedScene" uid="uid://blqcc5eibp8o7" path="res://scenes/UI/Skill.tscn" id="5_b3dkw"]
+[ext_resource type="Script" uid="uid://dl7tix5wku46t" path="res://scripts/data_branch.gd" id="6_asud0"]
+[ext_resource type="Resource" uid="uid://vwyhs4iogw06" path="res://resources/branches/damage_branch.tres" id="7_nv6mh"]
+[ext_resource type="Resource" uid="uid://bpqer8eatyp2m" path="res://resources/branches/health_branch.tres" id="8_8mahj"]
+[ext_resource type="Resource" uid="uid://cu0ne3nfpjg0w" path="res://resources/branches/soul_branch.tres" id="9_1dm6c"]
+[ext_resource type="Resource" uid="uid://djno2361c7hca" path="res://resources/branches/speed_branch.tres" id="10_gxjee"]
+
+[sub_resource type="FontFile" id="FontFile_m5k6n"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
 
 [node name="SkillTreeMenu" type="CanvasLayer" unique_id=689671359]
+visible = false
 script = ExtResource("1_21uuw")
 
 [node name="Background" type="TextureRect" parent="." unique_id=573986965]
@@ -11,59 +46,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_irljj")
+expand_mode = 1
 
-[node name="NodeMap" type="CenterContainer" parent="." unique_id=1550195315]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="SoulContainer" type="HBoxContainer" parent="." unique_id=1173957263]
+offset_right = 782.0
+offset_bottom = 85.0
 
-[node name="TreeRoot" type="Control" parent="NodeMap" unique_id=1186869248]
+[node name="TextureRect" type="TextureRect" parent="SoulContainer" unique_id=17844977]
 layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_7vqok")
+expand_mode = 3
 
-[node name="Line2D" type="Line2D" parent="NodeMap/TreeRoot" unique_id=1432810519]
+[node name="SoulsCount" type="Label" parent="SoulContainer" unique_id=788312530]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = SubResource("FontFile_m5k6n")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=933389923]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Node2D" type="Node2D" parent="." unique_id=1261688087]
+script = ExtResource("4_10gx6")
+skill_node_scene = ExtResource("5_b3dkw")
+branches = Array[ExtResource("6_asud0")]([ExtResource("7_nv6mh"), ExtResource("8_8mahj"), ExtResource("9_1dm6c"), ExtResource("10_gxjee")])
 
-[node name="TextureButton2" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=1277972385]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton3" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=1436273287]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton4" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=175297020]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton5" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=491227699]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton6" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=851646956]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton7" type="TextureButton" parent="NodeMap/TreeRoot" unique_id=1029558309]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="HeaderContainer" type="Panel" parent="." unique_id=2058035243]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SoulsLabel" type="Label" parent="HeaderContainer" unique_id=788312530]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="CloseButton" type="Button" parent="." unique_id=52126462]
+unique_name_in_owner = true
+offset_left = 1199.0
+offset_top = 8.0
+offset_right = 1271.0
+offset_bottom = 80.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+icon = ExtResource("3_7jnyq")

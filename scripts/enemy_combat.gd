@@ -11,6 +11,7 @@ extends Node2D
 @onready var attack_sound: AudioStreamPlayer = $"../AttackSound"
 @onready var death_sound: AudioStreamPlayer = $"../DeathSound"
 @onready var hurt_sound: AudioStreamPlayer = $"../HurtSound"
+@export var soul_reward : float = 1.0
 
 # Enemy
 @onready var enemy: CharacterBody2D = get_parent()
@@ -132,3 +133,6 @@ func die() -> void:
 	sprite.play("death")
 	death_sound.play()
 	
+	var final_souls = PlayerStats.get_stat("soul", float(soul_reward))
+	PlayerStats.add_souls(final_souls)
+	print("Player gained ", final_souls, " souls!")

@@ -41,15 +41,20 @@ var health: int
 var is_busy := false
 var is_blocking := false
 var is_dead := false
+var last_max_health := 0
 
 # Initial load in
 func _ready() -> void:
-	health = max_health
-	HUD.update_health(health, max_health)
+	health = PlayerStats.get_stat("health", max_health)
+	last_max_health = health
+	HUD.update_health(health, PlayerStats.get_stat("health", max_health))
 
+	var current_dmg_1 = int(PlayerStats.get_stat("attack1", attack_1_damage))
+	var current_dmg_2 = int(PlayerStats.get_stat("attack2", attack_2_damage))
+	
 	attacks = [
-		AttackData.new("attack1", attack_1_hit_box, attack_1_collision, [4, 5], attack_1_damage, attack_1_sound, 0.55),
-		AttackData.new("attack2", attack_2_hit_box, attack_2_collision, [3, 4], attack_2_damage, attack_2_sound, 0.10)
+		AttackData.new("attack1", attack_1_hit_box, attack_1_collision, [4, 5], current_dmg_1, attack_1_sound, 0.55),
+		AttackData.new("attack2", attack_2_hit_box, attack_2_collision, [3, 4], current_dmg_2, attack_2_sound, 0.10)
 	]
 
 	for attack in attacks:
@@ -57,6 +62,24 @@ func _ready() -> void:
 		attack.hit_box.body_entered.connect(_on_attack_hit_box_body_entered.bind(attack))
 
 	block_collision.disabled = true
+	PlayerStats.changed.connect(_on_stats_changed)
+
+# Update stats
+func _on_stats_changed() -> void:
+	var new_max = PlayerStats.get_stat("health", max_health)
+	
+	var health_diff = new_max - last_max_health
+	if health_diff > 0:
+		health += health_diff
+	
+	last_max_health = new_max
+	HUD.update_health(health, new_max)
+
+	for attack in attacks:
+		if attack.animation == "attack1":
+			attack.damage = int(PlayerStats.get_stat("attack1", attack_1_damage))
+		elif attack.animation == "attack2":
+			attack.damage = int(PlayerStats.get_stat("attack2", attack_2_damage))
 
 # Disable frames as needed
 func _process(_delta: float) -> void:
@@ -119,9 +142,10 @@ func take_damage(amount: int) -> void:
 		return 
 	
 	health -= amount
-	HUD.update_health(health, max_health)
+	var current_max = PlayerStats.get_stat("health", max_health)
+	HUD.update_health(health, current_max)
 
-	print("Player health: ", health, " / ", max_health)
+	print("Player health: ", health, " / ", current_max)
 	
 	if health <= 0:
 		die()

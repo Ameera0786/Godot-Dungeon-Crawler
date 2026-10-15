@@ -4,11 +4,12 @@ signal closed
 
 ## Turn both off on the main menu.
 @export var pause_game: bool = true
-@export var esc_toggles: bool = true
+@export var use_dimmer: bool = true
 
 @onready var volume_slider: HSlider = %VolumeSlider
 @onready var brightness_slider: HSlider = %BrightnessSlider
-@onready var close_button: Button = %CloseSettingsButton
+@onready var close_button: Button = %CloseButton
+@onready var dimmer: Control = $Dimmer
 
 # Initial values
 func _ready() -> void:
@@ -27,17 +28,13 @@ func _ready() -> void:
 	volume_slider.value_changed.connect(Settings.set_volume)
 	brightness_slider.value_changed.connect(Settings.set_brightness)
 
-# Cancels
-func _unhandled_input(event: InputEvent) -> void:
-	if esc_toggles and event.is_action_pressed("ui_cancel"):
-		toggle()
-		get_viewport().set_input_as_handled()
-
 # Open settings
 func open() -> void:
 	volume_slider.set_value_no_signal(Settings.volume)
 	brightness_slider.set_value_no_signal(Settings.brightness)
 	visible = true
+	if dimmer:
+		dimmer.visible = use_dimmer
 	if pause_game:
 		get_tree().paused = true
 
@@ -48,10 +45,3 @@ func close() -> void:
 	if pause_game:
 		get_tree().paused = false
 	closed.emit()
-
-# Turn on and off
-func toggle() -> void:
-	if visible:
-		close()
-	else:
-		open()

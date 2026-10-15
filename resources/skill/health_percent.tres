@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dn25xoanghfwe"]
+
+[ext_resource type="Texture2D" uid="uid://clvwgxx1js1ri" path="res://assets/UI/hex/hex_health.png" id="1_qdmph"]
+[ext_resource type="Script" uid="uid://bgdts5qujl8ax" path="res://scripts/data_skill.gd" id="2_xiw1i"]
+
+[resource]
+script = ExtResource("2_xiw1i")
+display_name = "Health"
+description = "Increases total health by 10%"
+icon = ExtResource("1_qdmph")
+cost = 10
+stat = &"health"
+amount = 10.0
+metadata/_custom_type_script = "uid://bgdts5qujl8ax"
