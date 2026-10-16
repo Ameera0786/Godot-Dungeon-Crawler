@@ -29,8 +29,11 @@ func check_initial_overlap() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		if is_boss_room:
+			if get_tree().get_nodes_in_group("boss").size() > 0:
+				HUD.show_boss_health()
 			MusicManager.play_boss_music()
 		else:
+			HUD.close_boss_health()
 			MusicManager.play_dungeon_music()
 		try_lock_room()
 

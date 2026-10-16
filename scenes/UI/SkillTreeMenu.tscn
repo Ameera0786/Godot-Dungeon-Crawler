@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dnfy3iidmq5f3" path="res://scripts/skill_tree_menu.gd" id="1_21uuw"]
 [ext_resource type="Texture2D" uid="uid://c2g8jp5xsek64" path="res://assets/UI/skill_tree_background.png" id="2_irljj"]
 [ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/x_button.png" id="3_7jnyq"]
-[ext_resource type="Texture2D" uid="uid://c35aaon3yfwxi" path="res://assets/UI/icon_soul.png" id="3_7vqok"]
+[ext_resource type="Texture2D" uid="uid://c35aaon3yfwxi" path="res://assets/UI/icons/icon_soul.png" id="3_7vqok"]
 [ext_resource type="Script" uid="uid://vr3iahme7o1l" path="res://scripts/skill_tree.gd" id="4_10gx6"]
 [ext_resource type="PackedScene" uid="uid://blqcc5eibp8o7" path="res://scenes/UI/Skill.tscn" id="5_b3dkw"]
 [ext_resource type="Script" uid="uid://dl7tix5wku46t" path="res://scripts/data_branch.gd" id="6_asud0"]
@@ -67,7 +67,7 @@ theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1261688087]
+[node name="Tree" type="Node2D" parent="." unique_id=1261688087]
 script = ExtResource("4_10gx6")
 skill_node_scene = ExtResource("5_b3dkw")
 branches = Array[ExtResource("6_asud0")]([ExtResource("7_nv6mh"), ExtResource("8_8mahj"), ExtResource("9_1dm6c"), ExtResource("10_gxjee")])

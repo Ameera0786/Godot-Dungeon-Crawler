@@ -30,6 +30,8 @@ var can_shoot: bool = true
 # Initial load in
 func _ready() -> void:
 	current_health = max_health
+	boss.add_to_group("boss")
+	HUD.update_boss_health(current_health, max_health)
 	animated_sprite.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
 # Called continuously by enemy_movement.gd
@@ -84,6 +86,7 @@ func take_damage(amount: int) -> void:
 
 	current_health -= amount
 	print("Boss took ", amount, " damage! Remaining health: ", current_health)
+	HUD.update_boss_health(current_health, max_health)
 
 	if current_health <= 0:
 		die()
@@ -95,6 +98,7 @@ func take_damage(amount: int) -> void:
 # Boss dies
 func die() -> void:
 	if is_dead:
+		HUD.close_boss_health()
 		return
 	
 	is_dead = true
@@ -102,9 +106,12 @@ func die() -> void:
 	is_hurt = false
 	
 	boss.remove_from_group("enemy")
+	boss.remove_from_group("boss")
 	animated_sprite.play("death")
 	death_sound.play()
 	
+	
+	HUD.close_boss_health()
 	var final_souls = PlayerStats.get_stat("soul", float(soul_reward))
 	PlayerStats.add_souls(final_souls)
 	print("Player gained ", final_souls, " souls!")

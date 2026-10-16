@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c35aaon3yfwxi"
-path="res://.godot/imported/icon_soul.png-bcdf271e36844246d7267cbd39068eaf.ctex"
+uid="uid://m6n600v038po"
+path="res://.godot/imported/circular png shadows.png-436e39291d295aff34a0186d1aab23e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/icon_soul.png"
-dest_files=["res://.godot/imported/icon_soul.png-bcdf271e36844246d7267cbd39068eaf.ctex"]
+source_file="res://assets/UI/shapes/circular png shadows.png"
+dest_files=["res://.godot/imported/circular png shadows.png-436e39291d295aff34a0186d1aab23e6.ctex"]
 
 [params]
 

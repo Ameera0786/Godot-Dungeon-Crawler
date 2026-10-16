@@ -3,7 +3,6 @@ extends CanvasLayer
 signal closed
 
 ## Turn both off on the main menu.
-@export var pause_game: bool = true
 @export var use_dimmer: bool = true
 
 @onready var volume_slider: HSlider = %VolumeSlider
@@ -35,13 +34,9 @@ func open() -> void:
 	visible = true
 	if dimmer:
 		dimmer.visible = use_dimmer
-	if pause_game:
-		get_tree().paused = true
 
 # Close settings
 func close() -> void:
 	Settings.save_settings()
 	visible = false
-	if pause_game:
-		get_tree().paused = false
 	closed.emit()

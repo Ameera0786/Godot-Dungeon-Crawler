@@ -2,7 +2,7 @@ extends Node
 
 signal changed
 
-var souls := 15.0
+var souls := 0.0
 var progress := {}
 var flat := {}
 var percent := {}

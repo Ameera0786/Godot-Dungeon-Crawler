@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bo5jvg2xdqx66" path="res://assets/characters/players/Human_Soldier_Sword_Shield_NPC/Human_Soldier_Sword_Shield_Hurt-Sheet.png" id="5_ghnd1"]
 [ext_resource type="Texture2D" uid="uid://b2io4nmcnjby8" path="res://assets/characters/players/Human_Soldier_Sword_Shield_NPC/Human_Soldier_Sword_Shield_Idle-Sheet.png" id="6_cobc1"]
 [ext_resource type="Texture2D" uid="uid://dgkr6k0iyioo0" path="res://assets/characters/players/Human_Soldier_Sword_Shield_NPC/Human_Soldier_Sword_Shield_Walk-Sheet.png" id="7_hfjmt"]
-[ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/shapes/circular png shadows.png" id="9_2p6f4"]
+[ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/UI/shapes/circular png shadows.png" id="9_2p6f4"]
 [ext_resource type="Script" uid="uid://dlghl0q65ntr6" path="res://scripts/player_combat.gd" id="10_euj1c"]
 [ext_resource type="AudioStream" uid="uid://bb8hnk5te5yxh" path="res://assets/VFX/human_death.wav" id="11_6bi8e"]
 [ext_resource type="AudioStream" uid="uid://bygaeh78ef75h" path="res://assets/VFX/human_block.wav" id="12_gyri4"]
@@ -295,7 +295,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"block",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -432,7 +432,7 @@ texture_filter = 1
 position = Vector2(-1.3333334, 0)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_m5k6n")
-animation = &"attack2"
+animation = &"block"
 autoplay = "idle"
 
 [node name="PlayerPhysicalCollision" type="CollisionShape2D" parent="." unique_id=1062953694]
@@ -484,7 +484,7 @@ shape = SubResource("RectangleShape2D_10fes")
 [node name="Combat" type="Node2D" parent="." unique_id=1052116444]
 visible = false
 script = ExtResource("10_euj1c")
-attack_1_damage = 100
+attack_1_damage = 40.0
 
 [node name="AttackSound" type="AudioStreamPlayer" parent="." unique_id=1907652388]
 

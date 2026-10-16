@@ -10,9 +10,9 @@ const ACTIONS = {
 
 # Export variables
 @export_group("Combat")
-@export var max_health := 100
-@export var attack_1_damage := 45
-@export var attack_2_damage := 30
+@export var max_health := 100.0
+@export var attack_1_damage := 45.0
+@export var attack_2_damage := 30.0
 
 # Player
 @onready var player: CharacterBody2D = get_parent()
@@ -37,14 +37,15 @@ var attack_2_sound = preload("res://assets/VFX/human_attack2.wav")
 
 # Variables
 var attacks: Array[AttackData] = []
-var health: int
+var health: float
 var is_busy := false
 var is_blocking := false
 var is_dead := false
-var last_max_health := 0
+var last_max_health := 0.0
 
 # Initial load in
 func _ready() -> void:
+
 	health = PlayerStats.get_stat("health", max_health)
 	last_max_health = health
 	HUD.update_health(health, PlayerStats.get_stat("health", max_health))
@@ -63,7 +64,8 @@ func _ready() -> void:
 
 	block_collision.disabled = true
 	PlayerStats.changed.connect(_on_stats_changed)
-
+	_on_stats_changed()
+	
 # Update stats
 func _on_stats_changed() -> void:
 	var new_max = PlayerStats.get_stat("health", max_health)
@@ -77,10 +79,10 @@ func _on_stats_changed() -> void:
 
 	for attack in attacks:
 		if attack.animation == "attack1":
-			attack.damage = int(PlayerStats.get_stat("attack1", attack_1_damage))
+			attack.damage = int(PlayerStats.get_stat("damage", attack_1_damage))
 		elif attack.animation == "attack2":
-			attack.damage = int(PlayerStats.get_stat("attack2", attack_2_damage))
-
+			attack.damage = int(PlayerStats.get_stat("damage", attack_2_damage))
+		
 # Disable frames as needed
 func _process(_delta: float) -> void:
 	if is_dead:
@@ -137,7 +139,7 @@ func _on_attack_hit_box_body_entered(body: Node2D, attack: AttackData) -> void:
 		body.take_damage(attack.damage)
 
 # Player takes damage
-func take_damage(amount: int) -> void:
+func take_damage(amount: float) -> void:
 	if is_dead or is_blocking:
 		return 
 	

@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://2jijrlxdyvh3" path="res://scripts/settings_menu.gd" id="1_yk8t3"]
 [ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/x_button.png" id="2_cjt8h"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b1p1q"]
-load_path = "res://.godot/imported/settings_panel.png-324bfb8fb3a0d269876aa79dd268ccff.ctex"
+[ext_resource type="Texture2D" uid="uid://btr5linoixp6a" path="res://assets/UI/settings_panel_background.png" id="2_kbpdg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03kym"]
-texture = SubResource("CompressedTexture2D_b1p1q")
+texture = ExtResource("2_kbpdg")
 texture_margin_left = 40.0
 texture_margin_top = 40.0
 texture_margin_right = 40.0

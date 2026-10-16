@@ -23,6 +23,11 @@ func _ready() -> void:
 
 # Use esc to toggle
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.pressed and not event.echo and event.keycode == KEY_ESCAPE:
+			if not esc_toggles:
+				return
+	
 	if esc_toggles and event.is_action_pressed("ui_cancel"):
 		var current_scene = get_tree().current_scene
 		if current_scene and current_scene.scene_file_path.get_file() == "MainMenu.tscn":

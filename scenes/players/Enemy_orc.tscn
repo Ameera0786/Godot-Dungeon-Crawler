@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cc5k76qro4sfh" path="res://assets/characters/enemies/orc/Orc_Hurt.png" id="4_8ja0i"]
 [ext_resource type="Texture2D" uid="uid://iwuo8gykptnj" path="res://assets/characters/enemies/orc/Orc_Idle.png" id="5_ypvch"]
 [ext_resource type="Texture2D" uid="uid://dxor32pk5h1kx" path="res://assets/characters/enemies/orc/Orc_Walk.png" id="6_gbho3"]
-[ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/shapes/circular png shadows.png" id="7_wrjey"]
+[ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/UI/shapes/circular png shadows.png" id="7_wrjey"]
 [ext_resource type="Script" uid="uid://cd7k7esgivvlq" path="res://scripts/enemy_combat.gd" id="8_8vyys"]
 [ext_resource type="AudioStream" uid="uid://b1jt8g0ri42vt" path="res://assets/VFX/orc_attack.wav" id="9_88803"]
 [ext_resource type="AudioStream" uid="uid://dtwhmwfhqolf4" path="res://assets/VFX/enemy_death.wav" id="10_7ue25"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m6n600v038po"
-path="res://.godot/imported/circular png shadows.png-7fa14897ff8151b0b3f6e27b09e1dfc1.ctex"
+uid="uid://rswjmhvtvubm"
+path="res://.godot/imported/icon_damage.png-a495cc2f20f956fbaf86ee587a667978.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/shapes/circular png shadows.png"
-dest_files=["res://.godot/imported/circular png shadows.png-7fa14897ff8151b0b3f6e27b09e1dfc1.ctex"]
+source_file="res://assets/UI/icons/icon_damage.png"
+dest_files=["res://.godot/imported/icon_damage.png-a495cc2f20f956fbaf86ee587a667978.ctex"]
 
 [params]
 

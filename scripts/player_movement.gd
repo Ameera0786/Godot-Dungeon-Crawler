@@ -22,7 +22,7 @@ func _ready() -> void:
 
 # Handle actions and movement
 func _physics_process(_delta: float) -> void:
-	if combat.is_dead:
+	if get_tree().paused or combat.is_dead:
 		return
 
 	if not combat.handle_combat_actions():

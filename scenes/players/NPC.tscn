@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbecvofa5fp0g"]
 
-[ext_resource type="Texture2D" uid="uid://cldm83st23wae" path="res://assets/shapes/speech_bubble_E_spritesheet.png" id="2_26w86"]
+[ext_resource type="Texture2D" uid="uid://cldm83st23wae" path="res://assets/UI/shapes/speech_bubble_E_spritesheet.png" id="2_26w86"]
 [ext_resource type="Script" uid="uid://dfptcfkqnob4x" path="res://scripts/npc.gd" id="2_h8sto"]
 [ext_resource type="Texture2D" uid="uid://4a4wdrr6v44j" path="res://assets/characters/players/Soldier/Soldier_Idle.png" id="2_jk37d"]
 

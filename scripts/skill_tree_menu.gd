@@ -4,6 +4,7 @@ signal closed
 
 @onready var close_button: Button = %CloseButton
 @onready var souls_count_label: Label = $SoulContainer/SoulsCount
+@onready var tree: Node2D = $Tree
 
 # Initial
 func _ready() -> void:
@@ -17,6 +18,7 @@ func _ready() -> void:
 	
 # Open menu
 func open() -> void:
+	tree.reset_view()
 	visible = true
 
 # Close menu

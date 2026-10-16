@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dlv8im3i6qw5j" path="res://assets/tilemaps/Dungeon tileset.png" id="1_jpgyn"]
 [ext_resource type="PackedScene" uid="uid://o8g8qp4dbb3p" path="res://scenes/players/Enemy_boss.tscn" id="2_urjwk"]
 [ext_resource type="PackedScene" uid="uid://dvuxsuk4a7khp" path="res://scenes/rooms/RoomEntry.tscn" id="3_jpgyn"]
+[ext_resource type="PackedScene" uid="uid://x723ia7cdt7t" path="res://scenes/players/Enemy_orc.tscn" id="4_k2kur"]
+[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/Enemy_slime.tscn" id="5_gpev4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25w3c"]
 texture = ExtResource("1_jpgyn")
@@ -596,8 +598,24 @@ tile_map_data = PackedByteArray("AAAGABEAAAAHAAkAAAAIAAgAAAAHAAkAAAATAA8AAAAHAAk
 tile_set = SubResource("TileSet_10fes")
 
 [node name="DemonBoss" parent="." unique_id=1322271421 instance=ExtResource("2_urjwk")]
-position = Vector2(946, 389)
+position = Vector2(616, 360)
 scale = Vector2(4, 4)
 
+[node name="EnemyOrc" parent="." unique_id=1743494039 instance=ExtResource("4_k2kur")]
+position = Vector2(212, 142)
+
+[node name="EnemyOrc2" parent="." unique_id=1913434535 instance=ExtResource("4_k2kur")]
+position = Vector2(867, 127)
+
+[node name="EnemyOrc3" parent="." unique_id=1134161503 instance=ExtResource("4_k2kur")]
+position = Vector2(858, 515)
+
+[node name="EnemySlime" parent="." unique_id=398018687 instance=ExtResource("5_gpev4")]
+position = Vector2(316, 494)
+
+[node name="EnemySlime2" parent="." unique_id=1946815602 instance=ExtResource("5_gpev4")]
+position = Vector2(432, 252)
+
 [node name="RoomEntry" parent="." unique_id=671535244 instance=ExtResource("3_jpgyn")]
+visible = false
 is_boss_room = true
