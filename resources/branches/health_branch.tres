@@ -8,5 +8,5 @@
 [resource]
 script = ExtResource("1_7h1a2")
 angle_deg = 90.0
-skills = Array[ExtResource("2_1gixf")]([ExtResource("3_0xktf"), ExtResource("4_l11hv"), ExtResource("3_0xktf"), ExtResource("4_l11hv")])
+skills = Array[ExtResource("2_1gixf")]([ExtResource("3_0xktf"), ExtResource("4_l11hv"), ExtResource("3_0xktf"), ExtResource("4_l11hv"), ExtResource("3_0xktf"), ExtResource("4_l11hv")])
 metadata/_custom_type_script = "uid://dl7tix5wku46t"

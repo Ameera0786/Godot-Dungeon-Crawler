@@ -1,9 +1,8 @@
 [gd_scene format=4 uid="uid://ckqfy8707h6mh"]
 
 [ext_resource type="Texture2D" uid="uid://dlv8im3i6qw5j" path="res://assets/tilemaps/Dungeon tileset.png" id="1_6iweg"]
-[ext_resource type="PackedScene" uid="uid://x723ia7cdt7t" path="res://scenes/players/Enemy_orc.tscn" id="2_5r10v"]
 [ext_resource type="Script" uid="uid://ctdm2bvrd5yx" path="res://scripts/spikes.gd" id="2_woaw4"]
-[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/Enemy_slime.tscn" id="3_woaw4"]
+[ext_resource type="Script" uid="uid://dx2fsekni3j7g" path="res://scripts/enemy_spawn.gd" id="3_5r10v"]
 [ext_resource type="PackedScene" uid="uid://dvuxsuk4a7khp" path="res://scenes/rooms/RoomEntry.tscn" id="4_5r10v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25w3c"]
@@ -789,31 +788,58 @@ tile_map_data = PackedByteArray("AAAfAAwAAAAXAAEAAAAfAA0AAAAXAAIAAAAgAAwAAAAXAAE
 tile_set = SubResource("TileSet_5r10v")
 script = ExtResource("2_woaw4")
 
-[node name="EnemyOrc" parent="." unique_id=1743494039 instance=ExtResource("2_5r10v")]
-position = Vector2(1065, 264)
+[node name="Node2D" type="Node2D" parent="." unique_id=1231503202]
+script = ExtResource("3_5r10v")
+min_enemies = 7
+max_enemies = 13
 
-[node name="EnemySlime" parent="." unique_id=2117086510 instance=ExtResource("3_woaw4")]
-position = Vector2(272, 184)
+[node name="Marker2D" type="Marker2D" parent="Node2D" unique_id=1441937180]
+position = Vector2(1121, 392)
 
-[node name="EnemyOrc2" parent="." unique_id=239479813 instance=ExtResource("2_5r10v")]
-position = Vector2(654, 119)
+[node name="Marker2D2" type="Marker2D" parent="Node2D" unique_id=126313197]
+position = Vector2(1035, 576)
 
-[node name="EnemySlime2" parent="." unique_id=66611332 instance=ExtResource("3_woaw4")]
-position = Vector2(178, 515)
+[node name="Marker2D3" type="Marker2D" parent="Node2D" unique_id=606753998]
+position = Vector2(756, 577)
 
-[node name="EnemySlime3" parent="." unique_id=262805108 instance=ExtResource("3_woaw4")]
-position = Vector2(627, 283)
+[node name="Marker2D4" type="Marker2D" parent="Node2D" unique_id=675396372]
+position = Vector2(229, 537)
 
-[node name="EnemySlime4" parent="." unique_id=2110268021 instance=ExtResource("3_woaw4")]
-position = Vector2(828, 396)
+[node name="Marker2D5" type="Marker2D" parent="Node2D" unique_id=1273868511]
+position = Vector2(234, 383)
 
-[node name="EnemyOrc3" parent="." unique_id=1748518709 instance=ExtResource("2_5r10v")]
-position = Vector2(578, 440)
+[node name="Marker2D6" type="Marker2D" parent="Node2D" unique_id=651535829]
+position = Vector2(207, 161)
 
-[node name="EnemyOrc4" parent="." unique_id=333363812 instance=ExtResource("2_5r10v")]
-position = Vector2(318, 395)
+[node name="Marker2D7" type="Marker2D" parent="Node2D" unique_id=778868879]
+position = Vector2(349, 248)
 
-[node name="EnemyOrc5" parent="." unique_id=639336306 instance=ExtResource("2_5r10v")]
-position = Vector2(964, 516)
+[node name="Marker2D8" type="Marker2D" parent="Node2D" unique_id=1038461834]
+position = Vector2(377, 560)
+
+[node name="Marker2D9" type="Marker2D" parent="Node2D" unique_id=2004616098]
+position = Vector2(973, 333)
+
+[node name="Marker2D10" type="Marker2D" parent="Node2D" unique_id=1828676064]
+position = Vector2(1058, 96)
+
+[node name="Marker2D11" type="Marker2D" parent="Node2D" unique_id=383023372]
+position = Vector2(1072, 243)
+
+[node name="Marker2D12" type="Marker2D" parent="Node2D" unique_id=394395993]
+position = Vector2(826, 179)
+
+[node name="Marker2D13" type="Marker2D" parent="Node2D" unique_id=887739949]
+position = Vector2(844, 454)
+
+[node name="Marker2D14" type="Marker2D" parent="Node2D" unique_id=476165767]
+position = Vector2(796, 303)
+
+[node name="Marker2D15" type="Marker2D" parent="Node2D" unique_id=1437928669]
+position = Vector2(571, 355)
+
+[node name="Marker2D16" type="Marker2D" parent="Node2D" unique_id=443611433]
+position = Vector2(606, 213)
 
 [node name="RoomEntry" parent="." unique_id=671535244 instance=ExtResource("4_5r10v")]
+visible = false

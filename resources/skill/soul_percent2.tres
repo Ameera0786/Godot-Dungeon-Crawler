@@ -10,7 +10,7 @@ description = "Increases soul drop by 15%
 
 "
 icon = ExtResource("1_54trg")
-cost = 10
+cost = 20
 stat = &"soul"
 amount = 15.0
 metadata/_custom_type_script = "uid://bgdts5qujl8ax"

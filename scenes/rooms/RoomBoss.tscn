@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dlv8im3i6qw5j" path="res://assets/tilemaps/Dungeon tileset.png" id="1_jpgyn"]
 [ext_resource type="PackedScene" uid="uid://o8g8qp4dbb3p" path="res://scenes/players/Enemy_boss.tscn" id="2_urjwk"]
 [ext_resource type="PackedScene" uid="uid://dvuxsuk4a7khp" path="res://scenes/rooms/RoomEntry.tscn" id="3_jpgyn"]
-[ext_resource type="PackedScene" uid="uid://x723ia7cdt7t" path="res://scenes/players/Enemy_orc.tscn" id="4_k2kur"]
-[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/Enemy_slime.tscn" id="5_gpev4"]
+[ext_resource type="Script" uid="uid://dx2fsekni3j7g" path="res://scripts/enemy_spawn.gd" id="3_urjwk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25w3c"]
 texture = ExtResource("1_jpgyn")
@@ -601,20 +600,46 @@ tile_set = SubResource("TileSet_10fes")
 position = Vector2(616, 360)
 scale = Vector2(4, 4)
 
-[node name="EnemyOrc" parent="." unique_id=1743494039 instance=ExtResource("4_k2kur")]
-position = Vector2(212, 142)
+[node name="Node2D" type="Node2D" parent="." unique_id=135198282]
+script = ExtResource("3_urjwk")
+min_enemies = 6
+max_enemies = 10
 
-[node name="EnemyOrc2" parent="." unique_id=1913434535 instance=ExtResource("4_k2kur")]
-position = Vector2(867, 127)
+[node name="Marker2D" type="Marker2D" parent="Node2D" unique_id=1756179875]
+position = Vector2(1014, 166)
 
-[node name="EnemyOrc3" parent="." unique_id=1134161503 instance=ExtResource("4_k2kur")]
-position = Vector2(858, 515)
+[node name="Marker2D2" type="Marker2D" parent="Node2D" unique_id=1753296901]
+position = Vector2(822, 273)
 
-[node name="EnemySlime" parent="." unique_id=398018687 instance=ExtResource("5_gpev4")]
-position = Vector2(316, 494)
+[node name="Marker2D3" type="Marker2D" parent="Node2D" unique_id=269627462]
+position = Vector2(483, 508)
 
-[node name="EnemySlime2" parent="." unique_id=1946815602 instance=ExtResource("5_gpev4")]
-position = Vector2(432, 252)
+[node name="Marker2D4" type="Marker2D" parent="Node2D" unique_id=712409105]
+position = Vector2(1004, 527)
+
+[node name="Marker2D5" type="Marker2D" parent="Node2D" unique_id=617304523]
+position = Vector2(389, 251)
+
+[node name="Marker2D6" type="Marker2D" parent="Node2D" unique_id=16286108]
+position = Vector2(138, 471)
+
+[node name="Marker2D7" type="Marker2D" parent="Node2D" unique_id=537729807]
+position = Vector2(358, 107)
+
+[node name="Marker2D8" type="Marker2D" parent="Node2D" unique_id=254862632]
+position = Vector2(204, 210)
+
+[node name="Marker2D9" type="Marker2D" parent="Node2D" unique_id=1783253426]
+position = Vector2(640, 148)
+
+[node name="Marker2D10" type="Marker2D" parent="Node2D" unique_id=2048834248]
+position = Vector2(863, 643)
+
+[node name="Marker2D11" type="Marker2D" parent="Node2D" unique_id=1468531408]
+position = Vector2(1086, 364)
+
+[node name="Marker2D12" type="Marker2D" parent="Node2D" unique_id=665830749]
+position = Vector2(267, 602)
 
 [node name="RoomEntry" parent="." unique_id=671535244 instance=ExtResource("3_jpgyn")]
 visible = false

@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://76g82ufd4bam"]
+
+[ext_resource type="Script" uid="uid://dfptcfkqnob4x" path="res://scripts/npc.gd" id="1_82n8q"]
+[ext_resource type="Texture2D" uid="uid://ct83cjbyhxqtj" path="res://assets/characters/cat/drculacat.png" id="2_82n8q"]
+[ext_resource type="Texture2D" uid="uid://cldm83st23wae" path="res://assets/UI/shapes/speech_bubble_E_spritesheet.png" id="3_33edy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh2g8"]
+atlas = ExtResource("2_82n8q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33edy"]
+atlas = ExtResource("2_82n8q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08t8v"]
+atlas = ExtResource("2_82n8q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abk08"]
+atlas = ExtResource("2_82n8q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvrsp"]
+atlas = ExtResource("2_82n8q")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc28d"]
+atlas = ExtResource("2_82n8q")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5k6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh2g8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33edy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08t8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abk08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvrsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc28d")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03ix0"]
+atlas = ExtResource("3_33edy")
+region = Rect2(0, 0, 240, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cnqh"]
+atlas = ExtResource("3_33edy")
+region = Rect2(240, 0, 240, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vviqr"]
+atlas = ExtResource("3_33edy")
+region = Rect2(480, 0, 240, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kk0oj"]
+atlas = ExtResource("3_33edy")
+region = Rect2(720, 0, 240, 288)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_10fes"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03ix0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cnqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vviqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kk0oj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m5k6n"]
+radius = 22.0
+height = 76.0
+
+[node name="Cat" type="CharacterBody2D" unique_id=1588146620 groups=["interactable"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_82n8q")
+npc_name = "Fluffles"
+dialogue_lines = Array[String](["Meow"])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1013726521]
+texture_filter = 1
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_m5k6n")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1472237264]
+position = Vector2(51, -49)
+scale = Vector2(0.238, 0.25)
+sprite_frames = SubResource("SpriteFrames_10fes")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=361236523]
+visible = false
+position = Vector2(2, -8)
+shape = SubResource("CapsuleShape2D_m5k6n")
+
+[node name="Label" type="Label" parent="." unique_id=827105320]
+offset_left = -50.0
+offset_top = -57.0
+offset_right = 32.0
+offset_bottom = -42.0
+theme_override_font_sizes/font_size = 10

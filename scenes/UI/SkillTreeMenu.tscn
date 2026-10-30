@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bwrimfwrx1rde"]
 
 [ext_resource type="Script" uid="uid://dnfy3iidmq5f3" path="res://scripts/skill_tree_menu.gd" id="1_21uuw"]
-[ext_resource type="Texture2D" uid="uid://c2g8jp5xsek64" path="res://assets/UI/skill_tree_background.png" id="2_irljj"]
-[ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/x_button.png" id="3_7jnyq"]
+[ext_resource type="Texture2D" uid="uid://c2g8jp5xsek64" path="res://assets/UI/shapes/skill_tree_background.png" id="2_irljj"]
+[ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/shapes/x_button.png" id="3_7jnyq"]
 [ext_resource type="Texture2D" uid="uid://c35aaon3yfwxi" path="res://assets/UI/icons/icon_soul.png" id="3_7vqok"]
 [ext_resource type="Script" uid="uid://vr3iahme7o1l" path="res://scripts/skill_tree.gd" id="4_10gx6"]
 [ext_resource type="PackedScene" uid="uid://blqcc5eibp8o7" path="res://scenes/UI/Skill.tscn" id="5_b3dkw"]

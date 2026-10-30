@@ -36,18 +36,17 @@ func handle_movement() -> void:
 		velocity = Vector2.ZERO
 		return
 
-	var distance = global_position.distance_to(player.global_position)
-
-	if distance > combat.attack_range:
-		var direction = global_position.direction_to(player.global_position)
+	var direction = global_position.direction_to(player.global_position)
+	
+	if direction.x < 0:
+		sprite.flip_h = true
+		attack_hit_box.scale.x = -1
+	elif direction.x > 0:
+		sprite.flip_h = false
+		attack_hit_box.scale.x = 1
+	
+	if global_position.distance_to(player.global_position) > combat.attack_range:
 		velocity = direction * speed
-
-		if direction.x < 0:
-			sprite.flip_h = true
-			attack_hit_box.scale.x = -1
-		elif direction.x > 0:
-			sprite.flip_h = false
-			attack_hit_box.scale.x = 1
 	else:
 		velocity = Vector2.ZERO
 

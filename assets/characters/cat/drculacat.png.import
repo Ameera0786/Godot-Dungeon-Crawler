@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk2g6isvognwr"
-path="res://.godot/imported/Arrow01(100x100).png-eb8a60e9af8842b4f23d114dabfccbc9.ctex"
+uid="uid://ct83cjbyhxqtj"
+path="res://.godot/imported/drculacat.png-66ab61010cd4f0f98faf4398ccc37998.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/projectiles/Arrow01(100x100).png"
-dest_files=["res://.godot/imported/Arrow01(100x100).png-eb8a60e9af8842b4f23d114dabfccbc9.ctex"]
+source_file="res://assets/characters/cat/drculacat.png"
+dest_files=["res://.godot/imported/drculacat.png-66ab61010cd4f0f98faf4398ccc37998.ctex"]
 
 [params]
 

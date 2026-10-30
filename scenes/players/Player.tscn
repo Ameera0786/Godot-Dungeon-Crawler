@@ -417,7 +417,7 @@ height = 80.0
 size = Vector2(40, 69.333336)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10fes"]
-size = Vector2(78.79167, 104)
+size = Vector2(51.9375, 104)
 
 [node name="Player" type="CharacterBody2D" unique_id=1588146620 groups=["player"]]
 scale = Vector2(0.75, 0.75)
@@ -451,7 +451,6 @@ scale = Vector2(0.20708238, 0.21200924)
 texture = ExtResource("9_2p6f4")
 
 [node name="HitBoxes" type="Node2D" parent="." unique_id=1620114261]
-visible = false
 
 [node name="BodyAreaHitBox" type="Area2D" parent="HitBoxes" unique_id=1176568900]
 visible = false
@@ -471,10 +470,11 @@ shape = SubResource("RectangleShape2D_m5k6n")
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Attack1HitBox" unique_id=1545550532]
-position = Vector2(63.458336, -2)
+position = Vector2(50.03125, -2)
 shape = SubResource("RectangleShape2D_10fes")
 
 [node name="Attack2HitBox" type="Area2D" parent="HitBoxes" unique_id=99443825]
+visible = false
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Attack2HitBox" unique_id=741232269]

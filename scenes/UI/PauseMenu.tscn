@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d3j0ig1p7n3hn"]
 
 [ext_resource type="Script" uid="uid://2ty8c20efcb8" path="res://scripts/pause_menu.gd" id="1_avwb0"]
-[ext_resource type="Texture2D" uid="uid://hu110yk4xjfo" path="res://assets/UI/button_panel_background.png" id="2_73e60"]
-[ext_resource type="Texture2D" uid="uid://btr5linoixp6a" path="res://assets/UI/settings_panel_background.png" id="2_onjwa"]
-[ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/x_button.png" id="3_onjwa"]
+[ext_resource type="Texture2D" uid="uid://hu110yk4xjfo" path="res://assets/UI/shapes/button_panel_background.png" id="2_73e60"]
+[ext_resource type="Texture2D" uid="uid://btr5linoixp6a" path="res://assets/UI/shapes/settings_panel_background.png" id="2_onjwa"]
+[ext_resource type="Texture2D" uid="uid://duyab73u5reqt" path="res://assets/UI/shapes/x_button.png" id="3_onjwa"]
 [ext_resource type="PackedScene" uid="uid://bdll064d8jvax" path="res://scenes/UI/SettingsMenu.tscn" id="4_3m1qe"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03kym"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2g8jp5xsek64"
-path="res://.godot/imported/skill_tree_background.png-7f6d181858cf677b449716cc4ed5e969.ctex"
+uid="uid://bxs0wxftiabtw"
+path="res://.godot/imported/Blood Monster_A_Walk.png-b90416e73d3545b2a517ea9cd6a9b54d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/skill_tree_background.png"
-dest_files=["res://.godot/imported/skill_tree_background.png-7f6d181858cf677b449716cc4ed5e969.ctex"]
+source_file="res://assets/characters/enemies/blood_monster/Blood Monster_A_Walk.png"
+dest_files=["res://.godot/imported/Blood Monster_A_Walk.png-b90416e73d3545b2a517ea9cd6a9b54d.ctex"]
 
 [params]
 

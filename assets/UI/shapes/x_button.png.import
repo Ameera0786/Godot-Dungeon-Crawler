@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3v8b4r7sgc1j"
-path="res://.godot/imported/Arrow01(32x32).png-6885a8411d1af14b161ae5527b5b8919.ctex"
+uid="uid://duyab73u5reqt"
+path="res://.godot/imported/x_button.png-964c8e12a289448fa0d1be738de5cb10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/projectiles/Arrow01(32x32).png"
-dest_files=["res://.godot/imported/Arrow01(32x32).png-6885a8411d1af14b161ae5527b5b8919.ctex"]
+source_file="res://assets/UI/shapes/x_button.png"
+dest_files=["res://.godot/imported/x_button.png-964c8e12a289448fa0d1be738de5cb10.ctex"]
 
 [params]
 

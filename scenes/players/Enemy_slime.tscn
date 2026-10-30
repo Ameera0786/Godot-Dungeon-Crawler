@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c1tr7gsps4wox" path="res://assets/characters/enemies/monster_slime/Monster_Slime_Idle-Sheet.png" id="5_m7ot8"]
 [ext_resource type="Texture2D" uid="uid://bbynpyhocfpyj" path="res://assets/characters/enemies/monster_slime/Monster_Slime_Walk-Sheet.png" id="6_ghyk2"]
 [ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/UI/shapes/circular png shadows.png" id="7_qne6e"]
-[ext_resource type="Script" uid="uid://cd7k7esgivvlq" path="res://scripts/enemy_combat.gd" id="8_7sgsc"]
+[ext_resource type="Script" uid="uid://cd7k7esgivvlq" path="res://scripts/enemy_melee_combat.gd" id="8_7sgsc"]
 [ext_resource type="AudioStream" uid="uid://dtwhmwfhqolf4" path="res://assets/VFX/enemy_death.wav" id="9_by2ll"]
 [ext_resource type="AudioStream" uid="uid://dh83rfppsqokx" path="res://assets/VFX/hurt.wav" id="10_fb0yj"]
 
@@ -319,7 +319,7 @@ texture_filter = 1
 position = Vector2(1, 1)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_2p6f4")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="EnemyPhysicalCollision" type="CollisionShape2D" parent="." unique_id=1387267945]

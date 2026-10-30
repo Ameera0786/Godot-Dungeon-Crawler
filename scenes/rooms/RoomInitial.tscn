@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dlv8im3i6qw5j" path="res://assets/tilemaps/Dungeon tileset.png" id="1_cbo1f"]
 [ext_resource type="PackedScene" uid="uid://bbecvofa5fp0g" path="res://scenes/players/NPC.tscn" id="2_7xxxi"]
+[ext_resource type="Script" uid="uid://dx2fsekni3j7g" path="res://scripts/enemy_spawn.gd" id="3_23yxr"]
 [ext_resource type="PackedScene" uid="uid://dvuxsuk4a7khp" path="res://scenes/rooms/RoomEntry.tscn" id="4_23yxr"]
-[ext_resource type="PackedScene" uid="uid://ddlqlm80hkcaa" path="res://scenes/players/Enemy_slime.tscn" id="5_cbo1f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25w3c"]
 texture = ExtResource("1_cbo1f")
@@ -599,8 +599,16 @@ tile_set = SubResource("TileSet_10fes")
 [node name="NPC" parent="." unique_id=1588146620 instance=ExtResource("2_7xxxi")]
 position = Vector2(654, 340)
 
-[node name="EnemySlime" parent="." unique_id=1743494039 instance=ExtResource("5_cbo1f")]
+[node name="Node2D" type="Node2D" parent="." unique_id=1536646393]
+script = ExtResource("3_23yxr")
+min_enemies = 0
+max_enemies = 2
+
+[node name="Marker2D" type="Marker2D" parent="Node2D" unique_id=1475287825]
 position = Vector2(1098, 277)
+
+[node name="Marker2D2" type="Marker2D" parent="Node2D" unique_id=2020745618]
+position = Vector2(1098, 400)
 
 [node name="RoomEntry" parent="." unique_id=671535244 instance=ExtResource("4_23yxr")]
 enemy_group_name = null

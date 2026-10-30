@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://qx7bcyf3u677" path="res://assets/characters/enemies/little_demon/walk/Little_demon_walk3.png" id="19_q8vrd"]
 [ext_resource type="Texture2D" uid="uid://e7omrrqbmwi5" path="res://assets/characters/enemies/little_demon/walk/Little_demon_walk4.png" id="20_vem7c"]
 [ext_resource type="Texture2D" uid="uid://m6n600v038po" path="res://assets/UI/shapes/circular png shadows.png" id="21_egmr6"]
-[ext_resource type="Script" uid="uid://ibm2hauklm14" path="res://scripts/boss_combat.gd" id="22_ovb15"]
+[ext_resource type="Script" uid="uid://ibm2hauklm14" path="res://scripts/enemy_boss_combat.gd" id="22_ovb15"]
 [ext_resource type="PackedScene" uid="uid://b0sgrmag1nisw" path="res://scenes/players/Fireball.tscn" id="23_s8o6v"]
 [ext_resource type="AudioStream" uid="uid://d4ev7j21ynsgp" path="res://assets/VFX/boss_attack.wav" id="24_jpvwv"]
 [ext_resource type="AudioStream" uid="uid://co5ut24ekfk3a" path="res://assets/VFX/boss_death.wav" id="25_0tpkp"]
@@ -156,7 +156,7 @@ script = ExtResource("1_jpvwv")
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_2t4bf")
-animation = &"death"
+animation = &"idle"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056664103]
@@ -186,7 +186,7 @@ texture = ExtResource("21_egmr6")
 
 [node name="Combat" type="Node2D" parent="." unique_id=901392161]
 script = ExtResource("22_ovb15")
-max_health = 500
+max_health = 1000
 attack_range = 300.0
 fireball_scene = ExtResource("23_s8o6v")
 

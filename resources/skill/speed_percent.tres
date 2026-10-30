@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("2_v8auk")
 display_name = "Speed"
-description = "Increases movement speed 10"
+description = "Increases movement speed 5"
 icon = ExtResource("1_h8lu3")
-cost = 10
+cost = 20
 stat = &"speed"
 kind = 0
-amount = 10.0
+amount = 5.0
 metadata/_custom_type_script = "uid://bgdts5qujl8ax"

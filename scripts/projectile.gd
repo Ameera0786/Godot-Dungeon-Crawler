@@ -13,11 +13,11 @@ func _ready() -> void:
 	if direction != Vector2.ZERO:
 		rotation = direction.angle()
 
-# Move fireball
+# Move projectile
 func _physics_process(delta: float) -> void:
 	global_position += direction * speed * delta
 
-# Fireball hits player
+# Projectile hits player
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		if body.has_method("take_damage"):

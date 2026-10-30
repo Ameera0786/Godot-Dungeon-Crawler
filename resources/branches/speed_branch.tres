@@ -18,5 +18,5 @@ metadata/_custom_type_script = "uid://bgdts5qujl8ax"
 [resource]
 script = ExtResource("1_o1b2x")
 angle_deg = 270.0
-skills = Array[ExtResource("2_o11wd")]([SubResource("Resource_kele5"), ExtResource("4_lsjn5"), ExtResource("5_tiovu"), ExtResource("4_lsjn5")])
+skills = Array[ExtResource("2_o11wd")]([SubResource("Resource_kele5"), ExtResource("4_lsjn5"), ExtResource("5_tiovu"), ExtResource("4_lsjn5"), ExtResource("5_tiovu"), ExtResource("4_lsjn5")])
 metadata/_custom_type_script = "uid://dl7tix5wku46t"

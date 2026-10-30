@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e150v2x8t081"
-path="res://.godot/imported/settings_button.png-731301f2b21da5dbefbb5c6a10d1ae11.ctex"
+uid="uid://cl7lw5q07lhgj"
+path="res://.godot/imported/Blood Monster_A_Attack01.png-2056f48f9d200874e74a600e3e9e86ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/settings_button.png"
-dest_files=["res://.godot/imported/settings_button.png-731301f2b21da5dbefbb5c6a10d1ae11.ctex"]
+source_file="res://assets/characters/enemies/blood_monster/Blood Monster_A_Attack01.png"
+dest_files=["res://.godot/imported/Blood Monster_A_Attack01.png-2056f48f9d200874e74a600e3e9e86ce.ctex"]
 
 [params]
 

@@ -2,52 +2,52 @@
 
 [ext_resource type="Texture2D" uid="uid://cldm83st23wae" path="res://assets/UI/shapes/speech_bubble_E_spritesheet.png" id="2_26w86"]
 [ext_resource type="Script" uid="uid://dfptcfkqnob4x" path="res://scripts/npc.gd" id="2_h8sto"]
-[ext_resource type="Texture2D" uid="uid://4a4wdrr6v44j" path="res://assets/characters/players/Soldier/Soldier_Idle.png" id="2_jk37d"]
+[ext_resource type="Texture2D" uid="uid://4a4wdrr6v44j" path="res://assets/characters/players/Soldier/Soldier_Idle.png" id="2_klcku"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yi4q6"]
-atlas = ExtResource("2_jk37d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqq6v"]
+atlas = ExtResource("2_klcku")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jk37d"]
-atlas = ExtResource("2_jk37d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3k20q"]
+atlas = ExtResource("2_klcku")
 region = Rect2(100, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_26w86"]
-atlas = ExtResource("2_jk37d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxsfb"]
+atlas = ExtResource("2_klcku")
 region = Rect2(200, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h8sto"]
-atlas = ExtResource("2_jk37d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mse1o"]
+atlas = ExtResource("2_klcku")
 region = Rect2(300, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wpfai"]
-atlas = ExtResource("2_jk37d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3kf1"]
+atlas = ExtResource("2_klcku")
 region = Rect2(400, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_va21k"]
-atlas = ExtResource("2_jk37d")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1aeno"]
+atlas = ExtResource("2_klcku")
 region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m5k6n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yi4q6")
+"texture": SubResource("AtlasTexture_yqq6v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jk37d")
+"texture": SubResource("AtlasTexture_3k20q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_26w86")
+"texture": SubResource("AtlasTexture_wxsfb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h8sto")
+"texture": SubResource("AtlasTexture_mse1o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wpfai")
+"texture": SubResource("AtlasTexture_a3kf1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_va21k")
+"texture": SubResource("AtlasTexture_1aeno")
 }],
 "loop": 1,
 "name": &"idle",
@@ -99,7 +99,7 @@ script = ExtResource("2_h8sto")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1013726521]
 texture_filter = 1
-scale = Vector2(4, 4)
+scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_m5k6n")
 animation = &"idle"
 autoplay = "idle"

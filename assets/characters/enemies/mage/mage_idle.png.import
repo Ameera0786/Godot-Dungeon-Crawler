@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hu110yk4xjfo"
-path="res://.godot/imported/button_panel_background.png-c95b6a5ea0640ef10cce4c26589d8c08.ctex"
+uid="uid://blqor1n0d7u1v"
+path="res://.godot/imported/mage_idle.png-6069ea28c6c7faabb1e27d355589823c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/button_panel_background.png"
-dest_files=["res://.godot/imported/button_panel_background.png-c95b6a5ea0640ef10cce4c26589d8c08.ctex"]
+source_file="res://assets/characters/enemies/mage/mage_idle.png"
+dest_files=["res://.godot/imported/mage_idle.png-6069ea28c6c7faabb1e27d355589823c.ctex"]
 
 [params]
 

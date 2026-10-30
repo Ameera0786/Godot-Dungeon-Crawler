@@ -56,7 +56,8 @@ func start_attack() -> void:
 	enemy.velocity = Vector2.ZERO
 	sprite.play("attack")
 	await get_tree().create_timer(0.45).timeout
-	attack_sound.play()
+	if is_attacking and not is_hurt and not is_dead:
+		attack_sound.play()
 	
 
 # Disable frames as needed
@@ -106,6 +107,7 @@ func take_damage(amount: int) -> void:
 	is_attacking = false
 	is_hurt = true
 	
+	attack_sound.stop()
 	attack_collision.set_deferred("disabled", not (sprite.frame in attack_hit_frames))
 	
 	print("Enemy took ", amount, " damage")

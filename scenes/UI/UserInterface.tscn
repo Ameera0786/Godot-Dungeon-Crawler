@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5ucsikxpou0t"]
 
 [ext_resource type="Script" uid="uid://bufq7s8bk2tl" path="res://scripts/hud.gd" id="1_4ucgc"]
-[ext_resource type="Texture2D" uid="uid://e150v2x8t081" path="res://assets/UI/settings_button.png" id="2_yl4mc"]
+[ext_resource type="Texture2D" uid="uid://e150v2x8t081" path="res://assets/UI/shapes/settings_button.png" id="2_yl4mc"]
 [ext_resource type="PackedScene" uid="uid://d3j0ig1p7n3hn" path="res://scenes/UI/PauseMenu.tscn" id="3_vr1b1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1b1"]
