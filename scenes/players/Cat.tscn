@@ -96,6 +96,7 @@ height = 76.0
 
 [node name="Cat" type="CharacterBody2D" unique_id=1588146620 groups=["interactable"]]
 scale = Vector2(0.5, 0.5)
+collision_layer = 4
 script = ExtResource("1_82n8q")
 npc_name = "Fluffles"
 dialogue_lines = Array[String](["Meow"])

@@ -221,7 +221,7 @@ radius = 7.0
 height = 35.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m5k6n"]
-radius = 7.0
+radius = 10.5
 height = 36.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rc3p5"]
@@ -254,6 +254,7 @@ position = Vector2(3.5, -4.5)
 shape = SubResource("CapsuleShape2D_m5k6n")
 
 [node name="AttackHitBox" type="Marker2D" parent="." unique_id=299501400]
+position = Vector2(14, -5)
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1606126971]
 visible = false

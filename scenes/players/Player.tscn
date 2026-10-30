@@ -272,7 +272,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attack2",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -432,7 +432,7 @@ texture_filter = 1
 position = Vector2(-1.3333334, 0)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_m5k6n")
-animation = &"block"
+animation = &"attack2"
 autoplay = "idle"
 
 [node name="PlayerPhysicalCollision" type="CollisionShape2D" parent="." unique_id=1062953694]
