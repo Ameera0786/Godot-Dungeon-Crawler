@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dl7rn0wx5r88b"]
+
+[ext_resource type="Script" uid="uid://bn5g53c28o6b7" path="res://scripts/end_screen.gd" id="1_4lg8v"]
+[ext_resource type="Texture2D" uid="uid://cjw4t3q658h02" path="res://assets/UI/EndScreen.jpg" id="1_f8j0x"]
+[ext_resource type="Texture2D" uid="uid://hu110yk4xjfo" path="res://assets/UI/shapes/button_panel_background.png" id="2_tckt1"]
+
+[node name="EndScreen" type="CanvasLayer" unique_id=561842741]
+script = ExtResource("1_4lg8v")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1285009666]
+offset_top = 2.0
+offset_right = 1284.0
+offset_bottom = 730.0
+texture = ExtResource("1_f8j0x")
+expand_mode = 1
+
+[node name="MainContainer" type="VBoxContainer" parent="TextureRect" unique_id=1539402753]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -302.99997
+offset_right = 550.6667
+offset_bottom = -12.333374
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+theme_override_constants/separation = 10
+
+[node name="RestartButton" type="Button" parent="TextureRect/MainContainer" unique_id=31723322]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("2_tckt1")
+
+[node name="Label" type="Label" parent="TextureRect/MainContainer/RestartButton" unique_id=1733304798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.6509804, 0.3254902, 1)
+theme_override_font_sizes/font_size = 32
+text = "Play Again"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="TextureRect/MainContainer" unique_id=1138501075]
+layout_mode = 2
+icon = ExtResource("2_tckt1")
+
+[node name="Label" type="Label" parent="TextureRect/MainContainer/MainMenuButton" unique_id=905566040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.6509804, 0.3254902, 1)
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="TextureRect/MainContainer" unique_id=891463896]
+layout_mode = 2
+icon = ExtResource("2_tckt1")
+
+[node name="Label" type="Label" parent="TextureRect/MainContainer/ExitButton" unique_id=657538480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.6509804, 0.3254902, 1)
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1

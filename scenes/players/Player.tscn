@@ -419,6 +419,9 @@ size = Vector2(40, 69.333336)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10fes"]
 size = Vector2(51.9375, 104)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j642q"]
+size = Vector2(102.66668, 104)
+
 [node name="Player" type="CharacterBody2D" unique_id=1588146620 groups=["player"]]
 scale = Vector2(0.75, 0.75)
 collision_layer = 2
@@ -434,6 +437,8 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_m5k6n")
 animation = &"attack2"
 autoplay = "idle"
+frame = 7
+frame_progress = 1.0
 
 [node name="PlayerPhysicalCollision" type="CollisionShape2D" parent="." unique_id=1062953694]
 visible = false
@@ -474,12 +479,11 @@ position = Vector2(50.03125, -2)
 shape = SubResource("RectangleShape2D_10fes")
 
 [node name="Attack2HitBox" type="Area2D" parent="HitBoxes" unique_id=99443825]
-visible = false
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Attack2HitBox" unique_id=741232269]
-position = Vector2(64.72917, -12)
-shape = SubResource("RectangleShape2D_10fes")
+position = Vector2(66.000015, -12)
+shape = SubResource("RectangleShape2D_j642q")
 
 [node name="Combat" type="Node2D" parent="." unique_id=1052116444]
 visible = false

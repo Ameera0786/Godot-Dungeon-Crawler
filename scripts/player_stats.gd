@@ -2,7 +2,7 @@ extends Node
 
 signal changed
 
-var souls := 1000.0
+var souls := 0.0
 var progress := {}
 var flat := {}
 var percent := {}
@@ -38,3 +38,10 @@ func buy(branch: BranchData, index: int) -> bool:
 # Get new stat
 func get_stat(stat: StringName, base: float) -> float:
 	return (base + flat.get(stat, 0.0)) * (1.0 + percent.get(stat, 0.0) / 100.0)
+
+func reset() -> void:
+	souls = 0.0
+	progress.clear()
+	flat.clear()
+	percent.clear()
+	changed.emit()

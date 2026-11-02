@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 # Exports
 @export var npc_name: String = "Twisted Sorcerer"
+@export var ends_game: bool = false
 @export_multiline var dialogue_lines: Array[String] = [
 	"Greetings traveler! I see another one of you decided to come down and explore the caves.",
 	"Beware of the monsters lurking in these halls. I already told the last lot of you that the pathway wasn't worth the treasure",
@@ -16,6 +17,10 @@ extends CharacterBody2D
 	"Well then, good luck. Now out of my sight.",
 	"...."
 ]
+
+# End screen
+@export_file("*.tscn") var end_screen_path: String = "res://scenes/UI/EndScreen.tscn"
+@export var fade_duration: float = 3.5
 
 # Sprite
 @onready var prompt_sprite: AnimatedSprite2D = $AnimatedSprite2D2
@@ -35,3 +40,25 @@ func interact() -> void:
 		return
 	
 	DialogueManager.start_dialogue(dialogue_lines, npc_name)
+	
+	if ends_game:
+		end_game()
+
+# Fade in end scene
+func end_game() -> void:
+	var canvas_layer = CanvasLayer.new()
+	var fade_rect = ColorRect.new()
+	
+	fade_rect.color = Color(0, 0, 0, 0)
+	fade_rect.set_anchors_preset(Control.PRESET_FULL_RECT)
+	
+	canvas_layer.add_child(fade_rect)
+	get_tree().root.add_child(canvas_layer)
+	
+	var tween = create_tween()
+	tween.tween_property(fade_rect, "color:a", 1.0, fade_duration)
+		
+	tween.tween_callback(func():
+		get_tree().change_scene_to_file(end_screen_path)
+		canvas_layer.queue_free()
+	)
