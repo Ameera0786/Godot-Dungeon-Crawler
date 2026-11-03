@@ -9,6 +9,7 @@ extends Control
 
 # Start up, show main menu
 func _ready() -> void:
+	PlayerStats.load_game()
 	HUD.visible = false
 	MusicManager.play_menu_music()
 	start_button.pressed.connect(_on_start_pressed)
